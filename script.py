@@ -2,8 +2,8 @@
 file = open("README.md", "w")
 
 # STEM
-repositories = ['bat', 'bowtie2']
-file.write('#List of Singularity containers\n')
+repositories = ['bowtie2']
+file.write('# List of Singularity containers\n')
 file.write('## STEM\n')
 file.write( '| Name | Information |\n' )
 file.write( '| --- | --- |\n' )
@@ -14,7 +14,7 @@ for repository in repositories:
 
 # Utilities
 repositories = ['bat']
-file.write('\n## Utiliiies\n')
+file.write('\n## Utilities\n')
 file.write( '| Name | Information |\n' )
 file.write( '| --- | --- |\n' )
 
