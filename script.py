@@ -2,7 +2,7 @@
 file = open("README.md", "w")
 
 # STEM
-repositories = ['bowtie2','fastani','phylip-suite','blast','bwa','picard','hisat2','abyss','octave','trimmomatic','tiger','gent','methylpy','fasttree']
+repositories = ['bowtie2','fastani','phylip-suite','blast','bwa','picard','hisat2','abyss','octave','trimmomatic','tiger','gent','methylpy','fasttree','ffmpeg']
 repositories.sort()
 file.write('# List of Singularity containers\n')
 file.write('## STEM\n')
