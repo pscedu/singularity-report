@@ -14,7 +14,7 @@ for repository in repositories:
   file.write( str )
 
 # Utilities
-repositories = ['bat','graphviz','hyperfine','dust','asciinema','rclone']
+repositories = ['bat','graphviz','hyperfine','dust','asciinema','rclone','ffmpeg']
 repositories.sort()
 file.write('\n## Utilities\n')
 file.write( '| Name | Information |\n' )
