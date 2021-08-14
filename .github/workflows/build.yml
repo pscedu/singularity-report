@@ -4,11 +4,10 @@ jobs:
   update-file:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Update repository
+      - uses: actions/checkout@v2
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - uses: Kludex/update-file@0.6.1
         with:
           script_file: script.py
