@@ -1,14 +1,21 @@
 name: Build it!
 on: [push, pull_request]
 jobs:
-  update-file:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update repository
-      - uses: actions/checkout@v2
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-      - uses: Kludex/update-file@0.6.1
-        with:
-          script_file: script.py
-          update_file: README.md
+    resources:
+        name: Update resources
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+            - uses: actions/setup-python@v2
+              with:
+                python-version: '3.7'
+            - name: Updating README.md
+              run: python script.py
+
+            - name: Update resources
+              uses: test-room-7/action-update-file@v1
+              with:
+                  file-path: README.md
+                  commit-msg: Update README.md
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
