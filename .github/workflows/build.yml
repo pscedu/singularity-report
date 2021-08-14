@@ -1,24 +1,19 @@
 name: Build it!
-on: [push]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.9]
+on:
+  push:
+  schedule:
+  - cron: "@weekly"
 
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - name: Update repository
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - uses: kludex/update-file@main
         with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8 pytest tabulate
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Build README file
-        run: |
-          # stop the build if there are Python syntax errors or undefined names
-          python script.py
+          script_file: script.py
+          update_file: README.md
