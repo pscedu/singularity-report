@@ -1,8 +1,6 @@
 name: Build it!
 on:
   push:
-  schedule:
-  - cron: "@weekly"
 
 jobs:
   update-file:
