@@ -2,7 +2,7 @@
 file = open("README.md", "w")
 
 # STEM
-repositories = ['bowtie2','spades','busco','samtools','fastani','phylip-suite','blast','viennarna','cutadapt','bismark','star','prodigal','bwa','picard','hisat2','abyss','octave','trimmomatic','tiger','gent','methylpy','fasttree','vcf2maf','htslib','kraken2','aspera-connect','trimmomatic']
+repositories = ['bowtie2','spades','blast','bowtie2'.'fastqc','sra-toolkit','gatk','hmmer','bcftools','raxml','spades','busco','samtools','bedtools','bamtools',,'fastani','phylip-suite','blast','viennarna','cutadapt','bismark','star','prodigal','bwa','picard','hisat2','abyss','octave','trimmomatic','tiger','gent','methylpy','fasttree','vcf2maf','htslib','kraken2','aspera-connect','trimmomatic']
 repositories.sort()
 file.write('# List of Singularity containers\n')
 file.write('## STEM\n')
@@ -14,7 +14,7 @@ for repository in repositories:
   file.write( str )
 
 # Utilities
-repositories = ['bat','graphviz','browsh','hyperfine','dust','asciinema','ffmpeg','imagemagick','rclone','ffmpeg']
+repositories = ['bat','graphviz','browsh','hyperfine','dust','gnuplot','pandoc','mc','bat','flac','visidata','octave','ncdu','lazygit','asciinema','ffmpeg','imagemagick','rclone','ffmpeg']
 repositories.sort()
 file.write('\n## Utilities\n')
 file.write( '| Name | Information |\n' )
