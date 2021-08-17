@@ -14,7 +14,7 @@ for repository in repositories:
   file.write( str )
 
 # Utilities
-repositories = ['graphviz','browsh','hyperfine','dust','gnuplot','pandoc','mc','bat','flac','visidata','octave','ncdu','lazygit','asciinema','ffmpeg','imagemagick','rclone']
+repositories = ['aws-cli','graphviz','browsh','hyperfine','dust','gnuplot','pandoc','mc','bat','flac','visidata','octave','ncdu','lazygit','asciinema','ffmpeg','imagemagick','rclone']
 repositories.sort()
 file.write('\n## Utilities\n')
 file.write( '| Name | Information |\n' )
