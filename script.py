@@ -6,6 +6,7 @@ repositories = ['anvio','funannotate','fastq-tools','meme-suite','braker2','rust
 repositories.sort()
 file.write('# List of Singularity containers\n')
 file.write('[![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)\n')
+file.write('[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)\n')
 file.write('## STEM\n')
 file.write( '| Name | Information |\n' )
 file.write( '| --- | --- |\n' )
