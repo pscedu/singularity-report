@@ -1,6 +1,8 @@
-# List of Singularity containers
+# List of Singularity definition files, modulefiles and more
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
 [![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)
+
+This repository lists the Singularity definition files and other files needed to deploy software on Bridges2, HuBMAP Hive and Brain Image Library. This list is maintained by the Biomedical Applications Group.
 ## STEM
 | Name | Information |
 | --- | --- |
