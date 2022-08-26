@@ -4,9 +4,10 @@ file = open("README.md", "w")
 # STEM
 repositories = ['anvio','funannotate','fastq-tools','meme-suite','braker2','rust','guppy','guppy-gpu','bsmap','salmon','rnaview','bioformats2raw','raw2ometiff','flash','blat','bedops','genemark-es','augustus','checkm','ncview','bowtie2','asciigenome','fastqc','sra-toolkit','gatk','hmmer','bcftools','raxml','spades','busco','samtools','bedtools','bamtools','fastani','phylip-suite','blast','viennarna','cutadapt','bismark','star','prodigal','bwa','picard','hisat2','abyss','octave','tiger','gent','methylpy','fasttree','vcf2maf','htslib','kraken2','aspera-connect','trimmomatic']
 repositories.sort()
-file.write('# List of Singularity containers\n')
+file.write('# List of Singularity definition files, modulefiles and more\n')
 file.write('[![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)\n')
-file.write('[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)\n')
+file.write('[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)\n\n')
+file.write('This repository lists the Singularity definition files and other files needed to deploy software on Bridges2, HuBMAP Hive and Brain Image Library. This list is maintained by the Biomedical Applications Group.\n')
 file.write('## STEM\n')
 file.write( '| Name | Information |\n' )
 file.write( '| --- | --- |\n' )
