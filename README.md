@@ -1,5 +1,6 @@
 # List of Singularity containers
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
+[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)
 ## STEM
 | Name | Information |
 | --- | --- |
