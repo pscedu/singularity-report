@@ -17,7 +17,7 @@ for repository in repositories:
   file.write( str )
 
 # Utilities
-repositories = ['hashdeep','vim','libtiff-tools','wordgrinder','shellcheck','pandiff','rich-cli','jq','jp','lowcharts','btop','aws-cli','cwltool','circos','glances','fdupes','graphviz','browsh','hyperfine','dust','gnuplot','pandoc','mc','bat','flac','visidata','octave','ncdu','lazygit','asciinema','ffmpeg','imagemagick','rclone']
+repositories = ['hashdeep','dua','vim','libtiff-tools','wordgrinder','shellcheck','pandiff','rich-cli','jq','jp','lowcharts','btop','aws-cli','cwltool','circos','glances','fdupes','graphviz','browsh','hyperfine','dust','gnuplot','pandoc','mc','bat','flac','visidata','octave','ncdu','lazygit','asciinema','ffmpeg','imagemagick','rclone']
 repositories.sort()
 file.write('\n## Utilities\n')
 file.write( '| Name | Information |\n' )
