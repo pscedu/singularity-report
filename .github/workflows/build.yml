@@ -7,7 +7,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v1
-            - uses: actions/setup-python@v2
+            - uses: actions/setup-python@3.14.0-beta.4
               with:
                 python-version: '3.7'
             - name: Updating README.md
