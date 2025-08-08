@@ -13,7 +13,7 @@ Description:
        - "Category" is based on the repository's type:
             * Scientific tool  → Listed in STEM_REPOS
             * Utility          → Listed in UTIL_REPOS
-            * Remote Desktop Application → Listed in VIZ_REPOS
+            * Remote Desktop App → Listed in VIZ_REPOS
        - "Name" is a Markdown link to the repository.
        - "Latest" is the latest GitHub release tag (or most recent git tag).
        - "Information" contains workflow status badges for CI pipelines.
@@ -31,7 +31,7 @@ Functionality:
     - Skips duplicate category assignments with priority order:
          1. Scientific tool
          2. Utility
-         3. Remote Desktop Application
+         3. Remote Desktop Appl
 
 Requirements:
     - Python 3.7+
@@ -170,7 +170,7 @@ UTIL_REPOS = [
     "rclone",
 ]
 
-# Visualization apps to be labeled as "Remote Desktop Application"
+# Visualization apps to be labeled as "Remote Desktop App"
 VIZ_REPOS = ["gimp", "inkscape"]
 
 HEADER = """# List of Singularity definition files, modulefiles and more
@@ -248,7 +248,7 @@ def unified_catalog() -> List[Tuple[str, str]]:
     Priority if a repo appears in multiple lists:
       1. Scientific tool
       2. Utility
-      3. Remote Desktop Application
+      3. Remote Desktop App
     Sorted alphabetically by repo name (case-insensitive).
     """
     m: Dict[str, str] = {}
@@ -257,7 +257,7 @@ def unified_catalog() -> List[Tuple[str, str]]:
     for r in UTIL_REPOS:
         m.setdefault(r, "Utility")
     for r in VIZ_REPOS:
-        m.setdefault(r, "Remote Desktop Application")
+        m.setdefault(r, "Remote Desktop App")
     return sorted(((cat, r) for r, cat in m.items()), key=lambda x: x[1].lower())
 
 
