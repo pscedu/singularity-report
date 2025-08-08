@@ -1,21 +1,39 @@
 name: Build it!
-on: [push, pull_request]
-jobs:
-    resources:
-        name: Update resources
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v1
-            - uses: actions/setup-python@3.14.0-beta.4
-              with:
-                python-version: '3.7'
-            - name: Updating README.md
-              run: python script.py
 
-            - name: Update resources
-              uses: test-room-7/action-update-file@v1
-              with:
-                  file-path: README.md
-                  commit-msg: Update README.md
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
+on:
+  push:
+    branches: ['**']          # Run on push to any branch
+  pull_request:
+    branches: ['**']          # Run on PR targeting any branch
+
+jobs:
+  resources:
+    name: Update resources
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed to commit README.md updates
+    steps:
+      - uses: actions/checkout@v4
+
+      # Python setup
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Install dependencies for script
+      - name: Install Python dependencies
+        run: pip install requests
+
+      # Run the README update script with GITHUB_TOKEN
+      - name: Updating README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python script.py
+
+      # Commit and push updated README.md
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: README.md
+          commit-msg: Update README.md
+          github-token: ${{ secrets.GITHUB_TOKEN }}
