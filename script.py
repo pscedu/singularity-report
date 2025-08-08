@@ -4,53 +4,10 @@
 Script Name: script.py
 Author: Pittsburgh Supercomputing Center (PSC)
 Description:
-    This script generates two files containing metadata for Singularity
-    definition files and related repositories:
+    Generates two files containing metadata for Singularity-related repositories:
 
-    1. README.md
-       - Markdown table for GitHub with the following columns:
-         Category | Name | Latest | Information
-       - "Category" is based on the repository's type:
-            * Scientific tool  → Listed in STEM_REPOS
-            * Utility          → Listed in UTIL_REPOS
-            * Remote Desktop App → Listed in VIZ_REPOS
-       - "Name" is a Markdown link to the repository.
-       - "Latest" is the latest GitHub release tag (or most recent git tag).
-       - "Information" contains workflow status badges for CI pipelines.
-
-    2. data.tsv
-       - Tab-separated version of the same table:
-         Category \t Name \t Latest \t Information
-       - "Information" contains the same workflow status badges in Markdown.
-
-Functionality:
-    - Fetches the latest release tag (or most recent git tag if no release).
-    - Uses the GitHub REST API (v3) with optional authentication.
-    - Runs concurrent HTTP requests with ThreadPoolExecutor for efficiency.
-    - Sorts table rows alphabetically by repository name (case-insensitive).
-    - Skips duplicate category assignments with priority order:
-         1. Scientific tool
-         2. Utility
-         3. Remote Desktop Appl
-
-Requirements:
-    - Python 3.7+
-    - requests library (pip install requests)
-    - Optional: Set environment variable GITHUB_TOKEN to increase API limits.
-
-Environment Variables:
-    GITHUB_TOKEN   GitHub personal access token for higher rate limits.
-
-Usage:
-    python script.py
-
-Outputs:
-    README.md   → Human-readable Markdown table for GitHub.
-    data.tsv    → Machine-readable TSV file with the same contents.
-
-Notes:
-    - The Information column contains CI workflow status badges only.
-    - Issues badge has been removed as per customization request.
+    README.md and data.tsv with columns:
+        Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready
 ===============================================================================
 """
 
@@ -59,7 +16,7 @@ import os
 import sys
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Dict, List, Tuple
+from typing import Dict, List, Tuple, Optional
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 ORG = "pscedu"
@@ -170,7 +127,6 @@ UTIL_REPOS = [
     "rclone",
 ]
 
-# Visualization apps to be labeled as "Remote Desktop App"
 VIZ_REPOS = ["gimp", "inkscape"]
 
 HEADER = """# List of Singularity definition files, modulefiles and more
@@ -181,120 +137,178 @@ This repository lists the Singularity definition files and other files needed to
 
 FOOTER = f"""---
 Copyright © 2020-{CURRENT_YEAR} Pittsburgh Supercomputing Center. All Rights Reserved.
-
-The [Biomedical Applications Group](https://www.psc.edu/biomedical-applications/) at the [Pittsburgh Supercomputing Center](https://www.psc.edu) in the [Mellon College of Science](https://www.cmu.edu/mcs/) at [Carnegie Mellon University](https://www.cmu.edu).
 """
 
 
-# ── GitHub API session ─────────────────────────────────────────────────────────
 def gh_session() -> requests.Session:
     s = requests.Session()
     token = os.getenv("GITHUB_TOKEN", "").strip()
     if token:
         s.headers["Authorization"] = f"Bearer {token}"
     s.headers["Accept"] = "application/vnd.github+json"
-    s.headers["X-GitHub-Api-Version"] = "2022-11-28"
     return s
 
 
 SESSION = gh_session()
 
 
-def latest_tag_for(repo: str) -> str:
-    """
-    Return latest release tag; if no releases, fallback to most recent git tag; else '—'.
-    Handles rate limiting by returning 'rate-limited' if X-RateLimit-Remaining == 0.
-    """
-    full = f"{ORG}/{PROJECT_PREFIX}-{repo}"
+# ── GitHub API helpers ─────────────────────────────────────────────────────────
+def release_info_for(full_repo: str) -> Tuple[str, Optional[str]]:
+    """Get latest tag & container status (True/False/None)."""
     try:
-        # Try latest release
-        r = SESSION.get(f"{API_BASE}/repos/{full}/releases/latest", timeout=10)
+        r = SESSION.get(f"{API_BASE}/repos/{full_repo}/releases/latest", timeout=10)
         if r.status_code == 200:
             data = r.json()
-            tag = (data.get("tag_name") or data.get("name") or "").strip()
-            if tag:
-                return tag
-
-        # Fallback: most recent tag
+            tag = (data.get("tag_name") or data.get("name") or "").strip() or "—"
+            sif_found = any(
+                (asset.get("name") or "").lower().endswith(".sif")
+                for asset in data.get("assets", []) or []
+            )
+            return tag, ("True" if sif_found else "False")
         r = SESSION.get(
-            f"{API_BASE}/repos/{full}/tags", params={"per_page": 1}, timeout=10
+            f"{API_BASE}/repos/{full_repo}/tags", params={"per_page": 1}, timeout=10
         )
         if r.status_code == 200 and isinstance(r.json(), list) and r.json():
-            tag = (r.json()[0].get("name") or "").strip()
-            if tag:
-                return tag
+            tag = (r.json()[0].get("name") or "").strip() or "—"
+            return tag, None
+    except requests.RequestException:
+        pass
+    return "—", None
 
-        # Rate limit hint
-        if r.status_code == 403 and r.headers.get("X-RateLimit-Remaining") == "0":
-            return "rate-limited"
+
+def last_commit_date_for(full_repo: str) -> str:
+    """Get date of last commit."""
+    try:
+        r = SESSION.get(
+            f"{API_BASE}/repos/{full_repo}/commits", params={"per_page": 1}, timeout=10
+        )
+        if r.status_code == 200 and isinstance(r.json(), list) and r.json():
+            commit = r.json()[0]
+            date = (
+                commit.get("commit", {}).get("committer", {}).get("date")
+                or commit.get("commit", {}).get("author", {}).get("date")
+                or ""
+            ).strip()
+            return date or "—"
     except requests.RequestException:
         pass
     return "—"
 
 
-def build_row(category_label: str, repo: str, latest: str) -> str:
+def workflow_status(full_repo: str, workflow_file: str) -> str:
+    """Return True if latest run of workflow_file succeeded, else False."""
+    try:
+        r = SESSION.get(
+            f"{API_BASE}/repos/{full_repo}/actions/workflows/{workflow_file}/runs",
+            params={"per_page": 1},
+            timeout=10,
+        )
+        if r.status_code == 200:
+            runs = r.json().get("workflow_runs", [])
+            if runs:
+                return "True" if runs[0].get("conclusion") == "success" else "False"
+    except requests.RequestException:
+        pass
+    return "False"
+
+
+# ── Table helpers ──────────────────────────────────────────────────────────────
+def build_row(
+    category_label: str,
+    repo: str,
+    latest: str,
+    last_commit: str,
+    container_status: Optional[str],
+    build_ready: str,
+    publish_ready: str,
+) -> str:
     base = f"https://github.com/{ORG}/{PROJECT_PREFIX}-{repo}"
-    # Include workflow badges; if a workflow doesn't exist, GitHub returns a neutral badge.
-    return (
-        f"| {category_label} | [{repo}]({base}) | {latest} | "
-        f"![Status]({base}/actions/workflows/main.yml/badge.svg)"
-        f"![Status]({base}/actions/workflows/pretty.yml/badge.svg) |\n"
-    )
+    container_display = container_status if container_status is not None else "None"
+    return f"| {category_label} | [{repo}]({base}) | {latest} | {last_commit} | {container_display} | {build_ready} | {publish_ready} |\n"
 
 
 def unified_catalog() -> List[Tuple[str, str]]:
-    """
-    Return a list of (CategoryLabel, repo) tuples with no duplicates.
-    Priority if a repo appears in multiple lists:
-      1. Scientific tool
-      2. Utility
-      3. Remote Desktop App
-    Sorted alphabetically by repo name (case-insensitive).
-    """
     m: Dict[str, str] = {}
     for r in STEM_REPOS:
         m[r] = "Scientific tool"
     for r in UTIL_REPOS:
         m.setdefault(r, "Utility")
     for r in VIZ_REPOS:
-        m.setdefault(r, "Remote Desktop App")
+        m.setdefault(r, "Remote Desktop Application")
     return sorted(((cat, r) for r, cat in m.items()), key=lambda x: x[1].lower())
 
 
+# ── Main logic ─────────────────────────────────────────────────────────────────
 def write_tables() -> None:
     items = unified_catalog()
-    tag_map: Dict[str, str] = {}
+    latest_map, commit_map, container_map, build_map, publish_map = {}, {}, {}, {}, {}
 
-    # Fetch tags concurrently
-    with ThreadPoolExecutor(max_workers=12) as ex:
-        futures = {ex.submit(latest_tag_for, repo): (cat, repo) for cat, repo in items}
+    def fetch_all(repo: str):
+        full = f"{ORG}/{PROJECT_PREFIX}-{repo}"
+        latest_tag, container_status = release_info_for(full)
+        last_commit = last_commit_date_for(full)
+        build_ready = workflow_status(full, "main.yml")
+        publish_ready = workflow_status(full, "pretty.yml")
+        return latest_tag, container_status, last_commit, build_ready, publish_ready
+
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        futures = {ex.submit(fetch_all, repo): (cat, repo) for cat, repo in items}
         for fut in as_completed(futures):
             cat, repo = futures[fut]
             try:
-                tag_map[repo] = fut.result()
+                (
+                    latest_tag,
+                    container_status,
+                    last_commit,
+                    build_ready,
+                    publish_ready,
+                ) = fut.result()
+                latest_map[repo] = latest_tag
+                container_map[repo] = container_status
+                commit_map[repo] = last_commit
+                build_map[repo] = build_ready
+                publish_map[repo] = publish_ready
             except Exception as e:
                 print(f"[warn] {repo}: {e}", file=sys.stderr)
-                tag_map[repo] = "—"
+                latest_map[repo] = "—"
+                container_map[repo] = None
+                commit_map[repo] = "—"
+                build_map[repo] = "False"
+                publish_map[repo] = "False"
 
-    # Write README.md
+    # README.md
     with open(OUTPUT, "w", encoding="utf-8") as md:
         md.write(HEADER)
-        md.write("| Category | Name | Latest | Information |\n")
-        md.write("| --- | --- | --- | --- |\n")
+        md.write(
+            "| Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |\n"
+        )
+        md.write("| --- | --- | --- | --- | --- | --- | --- |\n")
         for cat, repo in items:
-            md.write(build_row(cat, repo, tag_map.get(repo, "—")))
+            md.write(
+                build_row(
+                    cat,
+                    repo,
+                    latest_map[repo],
+                    commit_map[repo],
+                    container_map[repo],
+                    build_map[repo],
+                    publish_map[repo],
+                )
+            )
         md.write(FOOTER)
 
-    # Write data.tsv
+    # data.tsv
     with open(TSV_OUTPUT, "w", encoding="utf-8") as tsv:
-        tsv.write("Category\tName\tLatest\tInformation\n")
+        tsv.write(
+            "Category\tName\tLatest\tLast Commit\tContainer\tBuild ready\tPublishing ready\n"
+        )
         for cat, repo in items:
-            base = f"https://github.com/{ORG}/{PROJECT_PREFIX}-{repo}"
-            info = (
-                f"![Status]({base}/actions/workflows/main.yml/badge.svg) "
-                f"![Status]({base}/actions/workflows/pretty.yml/badge.svg)"
+            container_display = (
+                container_map[repo] if container_map[repo] is not None else "None"
             )
-            tsv.write(f"{cat}\t{repo}\t{tag_map.get(repo, '—')}\t{info}\n")
+            tsv.write(
+                f"{cat}\t{repo}\t{latest_map[repo]}\t{commit_map[repo]}\t{container_display}\t{build_map[repo]}\t{publish_map[repo]}\n"
+            )
 
 
 def main() -> None:
