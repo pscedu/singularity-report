@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Generate README.md with a single unified table:
+Generate README.md and data.tsv with a unified table:
 - Columns: Category | Name | Latest | Information
-- Category: "Scientific tool" if in STEM, "Utility" if in Utilities
+- Category: "Scientific tool" if in STEM, "Utility" if in Utilities,
+  "Remote Desktop Application" if in VIZ_REPOS
 - Latest = latest release tag (fallback to most recent git tag; '—' if none)
 - Uses GITHUB_TOKEN from GitHub Actions for higher rate limits.
 """
+
 from datetime import date
 import os
 import sys
@@ -17,6 +19,7 @@ from typing import Dict, List, Tuple
 ORG = "pscedu"
 PROJECT_PREFIX = "singularity"
 OUTPUT = "README.md"
+TSV_OUTPUT = "data.tsv"
 CURRENT_YEAR = date.today().year
 API_BASE = "https://api.github.com"
 
@@ -38,6 +41,11 @@ UTIL_REPOS = [
     "glances","fdupes","graphviz","browsh","hyperfine","dust","gnuplot","pandoc",
     "mc","bat","flac","visidata","octave","ncdu","lazygit","asciinema","ffmpeg",
     "imagemagick","rclone",
+]
+
+# New: visualization apps to be labeled as "Remote Desktop Application"
+VIZ_REPOS = [
+    "gimp", "inkscape"
 ]
 
 HEADER = """# List of Singularity definition files, modulefiles and more
@@ -67,20 +75,26 @@ SESSION = gh_session()
 def latest_tag_for(repo: str) -> str:
     """
     Return latest release tag; if no releases, fallback to most recent git tag; else '—'.
+    Handles rate limiting by returning 'rate-limited' if X-RateLimit-Remaining == 0.
     """
     full = f"{ORG}/{PROJECT_PREFIX}-{repo}"
     try:
+        # Try latest release
         r = SESSION.get(f"{API_BASE}/repos/{full}/releases/latest", timeout=10)
         if r.status_code == 200:
             data = r.json()
             tag = (data.get("tag_name") or data.get("name") or "").strip()
             if tag:
                 return tag
+
+        # Fallback: most recent tag
         r = SESSION.get(f"{API_BASE}/repos/{full}/tags", params={"per_page": 1}, timeout=10)
         if r.status_code == 200 and isinstance(r.json(), list) and r.json():
             tag = (r.json()[0].get("name") or "").strip()
             if tag:
                 return tag
+
+        # Rate limit hint
         if r.status_code == 403 and r.headers.get("X-RateLimit-Remaining") == "0":
             return "rate-limited"
     except requests.RequestException:
@@ -99,19 +113,21 @@ def build_row(category_label: str, repo: str, latest: str) -> str:
 def unified_catalog() -> List[Tuple[str, str]]:
     """
     Return a list of (CategoryLabel, repo) tuples with no duplicates.
-    If a repo appears in both lists, prefer 'Scientific tool'.
+    Priority if a repo appears in multiple lists:
+      1. Scientific tool
+      2. Utility
+      3. Remote Desktop Application
     """
     m: Dict[str, str] = {}
     for r in STEM_REPOS:
         m[r] = "Scientific tool"
     for r in UTIL_REPOS:
-        m.setdefault(r, "Utility")  # don't override STEM label if duplicate
+        m.setdefault(r, "Utility")
+    for r in VIZ_REPOS:
+        m.setdefault(r, "Remote Desktop Application")
     return sorted(((cat, r) for r, cat in m.items()), key=lambda x: (x[0], x[1]))
 
-def write_table(out) -> None:
-    out.write("| Category | Name | Latest | Information |\n")
-    out.write("| --- | --- | --- | --- |\n")
-
+def write_tables() -> None:
     items = unified_catalog()
     tag_map: Dict[str, str] = {}
 
@@ -126,14 +142,30 @@ def write_table(out) -> None:
                 print(f"[warn] {repo}: {e}", file=sys.stderr)
                 tag_map[repo] = "—"
 
-    for cat, repo in items:
-        out.write(build_row(cat, repo, tag_map.get(repo, "—")))
+    # Write README.md
+    with open(OUTPUT, "w", encoding="utf-8") as md:
+        md.write(HEADER)
+        md.write("| Category | Name | Latest | Information |\n")
+        md.write("| --- | --- | --- | --- |\n")
+        for cat, repo in items:
+            md.write(build_row(cat, repo, tag_map.get(repo, "—")))
+        md.write(FOOTER)
+
+    # Write data.tsv
+    with open(TSV_OUTPUT, "w", encoding="utf-8") as tsv:
+        tsv.write("Category\tName\tLatest\tInformation\n")
+        for cat, repo in items:
+            base = f"https://github.com/{ORG}/{PROJECT_PREFIX}-{repo}"
+            info = (
+                f"![Status]({base}/actions/workflows/main.yml/badge.svg) "
+                f"![Status]({base}/actions/workflows/pretty.yml/badge.svg) "
+                f"![Issues](https://img.shields.io/github/issues/{ORG}/{PROJECT_PREFIX}-{repo})"
+            )
+            tsv.write(f"{cat}\t{repo}\t{tag_map.get(repo, '—')}\t{info}\n")
 
 def main() -> None:
-    with open(OUTPUT, "w", encoding="utf-8") as f:
-        f.write(HEADER)
-        write_table(f)
-        f.write(FOOTER)
+    write_tables()
 
 if __name__ == "__main__":
     main()
+

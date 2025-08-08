@@ -2,40 +2,36 @@ name: Build it!
 
 on:
   push:
-    branches: ['**']          # Run on push to any branch
+    branches: ['**']
   pull_request:
-    branches: ['**']          # Run on PR targeting any branch
+    branches: ['**']
   schedule:
-    - cron: "0 * * * *"       # Run at the start of every hour (UTC)
+    - cron: "0 * * * *"  # hourly (UTC)
 
 jobs:
   resources:
     name: Update resources
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Needed to commit README.md updates
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
-      # Python setup
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # Install dependencies for script
       - name: Install Python dependencies
         run: pip install requests
 
-      # Run the README update script with GITHUB_TOKEN
-      - name: Updating README.md
+      - name: Run updater
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python script.py
+        run: python script.py  # make sure this writes README.md and data.tsv
 
-      # Commit and push updated README.md
-      - name: Update resources
-        uses: test-room-7/action-update-file@v1
+      - name: Commit README.md and data.tsv
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file-path: README.md
-          commit-msg: Update README.md
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "Update README.md and data.tsv"
+          file_pattern: "README.md data.tsv"
+
