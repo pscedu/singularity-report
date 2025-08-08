@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Generate README.md with repo table:
-- Columns: Name | Latest | Information
+Generate README.md with a single unified table:
+- Columns: Category | Name | Latest | Information
+- Category: "Scientific tool" if in STEM, "Utility" if in Utilities
 - Latest = latest release tag (fallback to most recent git tag; '—' if none)
 - Uses GITHUB_TOKEN from GitHub Actions for higher rate limits.
 """
@@ -10,6 +11,7 @@ import os
 import sys
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Dict, List, Tuple
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 ORG = "pscedu"
@@ -18,31 +20,31 @@ OUTPUT = "README.md"
 CURRENT_YEAR = date.today().year
 API_BASE = "https://api.github.com"
 
-CATEGORIES = {
-    "STEM": [
-        "stride","nanoplot","star-fusion","filtlong","porechop","anvio","funannotate",
-        "fastq-tools","meme-suite","braker2","rust","guppy","guppy-gpu","bsmap",
-        "salmon","rnaview","bioformats2raw","raw2ometiff","flash","blat","bedops",
-        "genemark-es","augustus","checkm","ncview","bowtie2","asciigenome","fastqc",
-        "sra-toolkit","gatk","hmmer","bcftools","raxml","spades","busco","samtools",
-        "bedtools","bamtools","fastani","phylip-suite","blast","viennarna","cutadapt",
-        "bismark","star","prodigal","bwa","picard","hisat2","abyss","octave","tiger",
-        "gent","methylpy","fasttree","vcf2maf","htslib","kraken2","aspera-connect",
-        "trimmomatic",
-    ],
-    "Utilities": [
-        "hashdeep","dua","vim","timewarrior","libtiff-tools","wordgrinder","shellcheck",
-        "pandiff","rich-cli","jq","jp","lowcharts","btop","aws-cli","cwltool","circos",
-        "glances","fdupes","graphviz","browsh","hyperfine","dust","gnuplot","pandoc",
-        "mc","bat","flac","visidata","octave","ncdu","lazygit","asciinema","ffmpeg",
-        "imagemagick","rclone",
-    ],
-}
+STEM_REPOS = [
+    "stride","nanoplot","star-fusion","filtlong","porechop","anvio","funannotate",
+    "fastq-tools","meme-suite","braker2","rust","guppy","guppy-gpu","bsmap",
+    "salmon","rnaview","bioformats2raw","raw2ometiff","flash","blat","bedops",
+    "genemark-es","augustus","checkm","ncview","bowtie2","asciigenome","fastqc",
+    "sra-toolkit","gatk","hmmer","bcftools","raxml","spades","busco","samtools",
+    "bedtools","bamtools","fastani","phylip-suite","blast","viennarna","cutadapt",
+    "bismark","star","prodigal","bwa","picard","hisat2","abyss","octave","tiger",
+    "gent","methylpy","fasttree","vcf2maf","htslib","kraken2","aspera-connect",
+    "trimmomatic",
+]
+
+UTIL_REPOS = [
+    "hashdeep","dua","vim","timewarrior","libtiff-tools","wordgrinder","shellcheck",
+    "pandiff","rich-cli","jq","jp","lowcharts","btop","aws-cli","cwltool","circos",
+    "glances","fdupes","graphviz","browsh","hyperfine","dust","gnuplot","pandoc",
+    "mc","bat","flac","visidata","octave","ncdu","lazygit","asciinema","ffmpeg",
+    "imagemagick","rclone",
+]
 
 HEADER = """# List of Singularity definition files, modulefiles and more
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
+[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)
 
-This repository lists the Singularity definition files and other files needed to deploy software on Bridges2 and similar systems maintained by PSC.
+This repository lists the Singularity definition files and other files needed to deploy software on Bridges2, HuBMAP HIVE and Brain Image Library.
 """
 
 FOOTER = f"""---
@@ -69,14 +71,12 @@ def latest_tag_for(repo: str) -> str:
     """
     full = f"{ORG}/{PROJECT_PREFIX}-{repo}"
     try:
-        # Try latest release
         r = SESSION.get(f"{API_BASE}/repos/{full}/releases/latest", timeout=10)
         if r.status_code == 200:
             data = r.json()
             tag = (data.get("tag_name") or data.get("name") or "").strip()
             if tag:
                 return tag
-        # If not found or empty, try tags endpoint (first item = most recent)
         r = SESSION.get(f"{API_BASE}/repos/{full}/tags", params={"per_page": 1}, timeout=10)
         if r.status_code == 200 and isinstance(r.json(), list) and r.json():
             tag = (r.json()[0].get("name") or "").strip()
@@ -88,43 +88,52 @@ def latest_tag_for(repo: str) -> str:
         pass
     return "—"
 
-def build_row(repo: str, latest: str) -> str:
+def build_row(category_label: str, repo: str, latest: str) -> str:
     base = f"https://github.com/{ORG}/{PROJECT_PREFIX}-{repo}"
     return (
-        f"| [{repo}]({base}) | {latest} | "
+        f"| {category_label} | [{repo}]({base}) | {latest} | "
         f"![Status]({base}/actions/workflows/main.yml/badge.svg)"
         f"![Status]({base}/actions/workflows/pretty.yml/badge.svg)"
-        f"![Issues](https://img.shields.io/github/issues/{ORG}/{PROJECT_PREFIX}-{repo})"
-        f"![Stars](https://img.shields.io/github/stars/{ORG}/{PROJECT_PREFIX}-{repo}) |\n"
+        f"![Issues](https://img.shields.io/github/issues/{ORG}/{PROJECT_PREFIX}-{repo}) |\n"
     )
 
-def write_category(out, title: str, repos: list[str]) -> None:
-    out.write(f"\n## {title}\n")
-    out.write("| Name | Latest | Information |\n")
-    out.write("| --- | --- | --- |\n")
+def unified_catalog() -> List[Tuple[str, str]]:
+    """
+    Return a list of (CategoryLabel, repo) tuples with no duplicates.
+    If a repo appears in both lists, prefer 'Scientific tool'.
+    """
+    m: Dict[str, str] = {}
+    for r in STEM_REPOS:
+        m[r] = "Scientific tool"
+    for r in UTIL_REPOS:
+        m.setdefault(r, "Utility")  # don't override STEM label if duplicate
+    return sorted(((cat, r) for r, cat in m.items()), key=lambda x: (x[0], x[1]))
 
-    repos_sorted = sorted(set(repos))
-    tag_map: dict[str, str] = {}
+def write_table(out) -> None:
+    out.write("| Category | Name | Latest | Information |\n")
+    out.write("| --- | --- | --- | --- |\n")
 
-    # Fetch latest tags concurrently
+    items = unified_catalog()
+    tag_map: Dict[str, str] = {}
+
+    # Fetch tags concurrently
     with ThreadPoolExecutor(max_workers=12) as ex:
-        futures = {ex.submit(latest_tag_for, r): r for r in repos_sorted}
+        futures = {ex.submit(latest_tag_for, repo): (cat, repo) for cat, repo in items}
         for fut in as_completed(futures):
-            repo = futures[fut]
+            cat, repo = futures[fut]
             try:
                 tag_map[repo] = fut.result()
             except Exception as e:
                 print(f"[warn] {repo}: {e}", file=sys.stderr)
                 tag_map[repo] = "—"
 
-    for repo in repos_sorted:
-        out.write(build_row(repo, tag_map.get(repo, "—")))
+    for cat, repo in items:
+        out.write(build_row(cat, repo, tag_map.get(repo, "—")))
 
 def main() -> None:
     with open(OUTPUT, "w", encoding="utf-8") as f:
         f.write(HEADER)
-        for title, repos in CATEGORIES.items():
-            write_category(f, title, repos)
+        write_table(f)
         f.write(FOOTER)
 
 if __name__ == "__main__":
