@@ -2,105 +2,103 @@
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
 
 This repository lists the Singularity definition files and other files needed to deploy software on Bridges2 and similar systems maintained by the Pittsburgh Supercomputing Center.
-| Category | Name | Latest | Information |
-| --- | --- | --- | --- |
-| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | ![Status](https://github.com/pscedu/singularity-abyss/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-abyss/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | — | ![Status](https://github.com/pscedu/singularity-anvio/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-anvio/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | ![Status](https://github.com/pscedu/singularity-asciigenome/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-asciigenome/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | ![Status](https://github.com/pscedu/singularity-asciinema/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-asciinema/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | ![Status](https://github.com/pscedu/singularity-aspera-connect/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-aspera-connect/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [augustus](https://github.com/pscedu/singularity-augustus) | — | ![Status](https://github.com/pscedu/singularity-augustus/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-augustus/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [aws-cli](https://github.com/pscedu/singularity-aws-cli) | v2.22.28 | ![Status](https://github.com/pscedu/singularity-aws-cli/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-aws-cli/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | ![Status](https://github.com/pscedu/singularity-bamtools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bamtools/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [bat](https://github.com/pscedu/singularity-bat) | v0.24.0 | ![Status](https://github.com/pscedu/singularity-bat/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bat/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | — | ![Status](https://github.com/pscedu/singularity-bcftools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bcftools/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bedops](https://github.com/pscedu/singularity-bedops) | — | ![Status](https://github.com/pscedu/singularity-bedops/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bedops/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bedtools](https://github.com/pscedu/singularity-bedtools) | v2.30.0 | ![Status](https://github.com/pscedu/singularity-bedtools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bedtools/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bioformats2raw](https://github.com/pscedu/singularity-bioformats2raw) | v0.9.4 | ![Status](https://github.com/pscedu/singularity-bioformats2raw/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bioformats2raw/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bismark](https://github.com/pscedu/singularity-bismark) | — | ![Status](https://github.com/pscedu/singularity-bismark/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bismark/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [blast](https://github.com/pscedu/singularity-blast) | v2.13.0 | ![Status](https://github.com/pscedu/singularity-blast/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-blast/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [blat](https://github.com/pscedu/singularity-blat) | — | ![Status](https://github.com/pscedu/singularity-blat/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-blat/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bowtie2](https://github.com/pscedu/singularity-bowtie2) | v2.4.4 | ![Status](https://github.com/pscedu/singularity-bowtie2/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bowtie2/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | ![Status](https://github.com/pscedu/singularity-braker2/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-braker2/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | ![Status](https://github.com/pscedu/singularity-browsh/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-browsh/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | ![Status](https://github.com/pscedu/singularity-bsmap/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bsmap/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [btop](https://github.com/pscedu/singularity-btop) | — | ![Status](https://github.com/pscedu/singularity-btop/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-btop/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | ![Status](https://github.com/pscedu/singularity-busco/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-busco/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [bwa](https://github.com/pscedu/singularity-bwa) | v0.7.17a | ![Status](https://github.com/pscedu/singularity-bwa/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-bwa/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [checkm](https://github.com/pscedu/singularity-checkm) | v1.1.3 | ![Status](https://github.com/pscedu/singularity-checkm/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-checkm/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [circos](https://github.com/pscedu/singularity-circos) | v0.69-9 | ![Status](https://github.com/pscedu/singularity-circos/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-circos/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [cutadapt](https://github.com/pscedu/singularity-cutadapt) | — | ![Status](https://github.com/pscedu/singularity-cutadapt/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-cutadapt/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | ![Status](https://github.com/pscedu/singularity-cwltool/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-cwltool/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [dua](https://github.com/pscedu/singularity-dua) | v2.28.0 | ![Status](https://github.com/pscedu/singularity-dua/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-dua/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [dust](https://github.com/pscedu/singularity-dust) | v0.8.4 | ![Status](https://github.com/pscedu/singularity-dust/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-dust/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | ![Status](https://github.com/pscedu/singularity-fastani/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-fastani/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [fastq-tools](https://github.com/pscedu/singularity-fastq-tools) | v0.8 | ![Status](https://github.com/pscedu/singularity-fastq-tools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-fastq-tools/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [fastqc](https://github.com/pscedu/singularity-fastqc) | v0.12.1 | ![Status](https://github.com/pscedu/singularity-fastqc/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-fastqc/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [fasttree](https://github.com/pscedu/singularity-fasttree) | v2.1.11 | ![Status](https://github.com/pscedu/singularity-fasttree/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-fasttree/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [fdupes](https://github.com/pscedu/singularity-fdupes) | v2.4.0 | ![Status](https://github.com/pscedu/singularity-fdupes/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-fdupes/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [ffmpeg](https://github.com/pscedu/singularity-ffmpeg) | v7.1.1 | ![Status](https://github.com/pscedu/singularity-ffmpeg/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-ffmpeg/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [filtlong](https://github.com/pscedu/singularity-filtlong) | v0.2.1 | ![Status](https://github.com/pscedu/singularity-filtlong/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-filtlong/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [flac](https://github.com/pscedu/singularity-flac) | — | ![Status](https://github.com/pscedu/singularity-flac/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-flac/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [flash](https://github.com/pscedu/singularity-flash) | — | ![Status](https://github.com/pscedu/singularity-flash/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-flash/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [funannotate](https://github.com/pscedu/singularity-funannotate) | — | ![Status](https://github.com/pscedu/singularity-funannotate/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-funannotate/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | ![Status](https://github.com/pscedu/singularity-gatk/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-gatk/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [genemark-es](https://github.com/pscedu/singularity-genemark-es) | — | ![Status](https://github.com/pscedu/singularity-genemark-es/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-genemark-es/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | ![Status](https://github.com/pscedu/singularity-gent/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-gent/actions/workflows/pretty.yml/badge.svg) |
-| Remote Desktop App | [gimp](https://github.com/pscedu/singularity-gimp) | — | ![Status](https://github.com/pscedu/singularity-gimp/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-gimp/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [glances](https://github.com/pscedu/singularity-glances) | v3.3.1 | ![Status](https://github.com/pscedu/singularity-glances/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-glances/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [gnuplot](https://github.com/pscedu/singularity-gnuplot) | v6.0 | ![Status](https://github.com/pscedu/singularity-gnuplot/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-gnuplot/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [graphviz](https://github.com/pscedu/singularity-graphviz) | v2.44.0 | ![Status](https://github.com/pscedu/singularity-graphviz/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-graphviz/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [guppy](https://github.com/pscedu/singularity-guppy) | — | ![Status](https://github.com/pscedu/singularity-guppy/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-guppy/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [guppy-gpu](https://github.com/pscedu/singularity-guppy-gpu) | — | ![Status](https://github.com/pscedu/singularity-guppy-gpu/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-guppy-gpu/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [hashdeep](https://github.com/pscedu/singularity-hashdeep) | v4.4 | ![Status](https://github.com/pscedu/singularity-hashdeep/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-hashdeep/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [hisat2](https://github.com/pscedu/singularity-hisat2) | v2.2.1 | ![Status](https://github.com/pscedu/singularity-hisat2/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-hisat2/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [hmmer](https://github.com/pscedu/singularity-hmmer) | v3.3.1 | ![Status](https://github.com/pscedu/singularity-hmmer/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-hmmer/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [htslib](https://github.com/pscedu/singularity-htslib) | v1.13 | ![Status](https://github.com/pscedu/singularity-htslib/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-htslib/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [hyperfine](https://github.com/pscedu/singularity-hyperfine) | v1.17.0 | ![Status](https://github.com/pscedu/singularity-hyperfine/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-hyperfine/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [imagemagick](https://github.com/pscedu/singularity-imagemagick) | v7.1.1-39 | ![Status](https://github.com/pscedu/singularity-imagemagick/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-imagemagick/actions/workflows/pretty.yml/badge.svg) |
-| Remote Desktop App | [inkscape](https://github.com/pscedu/singularity-inkscape) | — | ![Status](https://github.com/pscedu/singularity-inkscape/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-inkscape/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [jp](https://github.com/pscedu/singularity-jp) | v0.2.1 | ![Status](https://github.com/pscedu/singularity-jp/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-jp/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [jq](https://github.com/pscedu/singularity-jq) | v1.7.1-r0 | ![Status](https://github.com/pscedu/singularity-jq/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-jq/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [kraken2](https://github.com/pscedu/singularity-kraken2) | — | ![Status](https://github.com/pscedu/singularity-kraken2/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-kraken2/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [lazygit](https://github.com/pscedu/singularity-lazygit) | v0.53.0 | ![Status](https://github.com/pscedu/singularity-lazygit/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-lazygit/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [libtiff-tools](https://github.com/pscedu/singularity-libtiff-tools) | v4.2.0 | ![Status](https://github.com/pscedu/singularity-libtiff-tools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-libtiff-tools/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [lowcharts](https://github.com/pscedu/singularity-lowcharts) | v0.5.9 | ![Status](https://github.com/pscedu/singularity-lowcharts/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-lowcharts/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [mc](https://github.com/pscedu/singularity-mc) | v4.8.32 | ![Status](https://github.com/pscedu/singularity-mc/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-mc/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [meme-suite](https://github.com/pscedu/singularity-meme-suite) | v5.4.0 | ![Status](https://github.com/pscedu/singularity-meme-suite/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-meme-suite/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [methylpy](https://github.com/pscedu/singularity-methylpy) | v1.4.3 | ![Status](https://github.com/pscedu/singularity-methylpy/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-methylpy/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [nanoplot](https://github.com/pscedu/singularity-nanoplot) | v1.42.0 | ![Status](https://github.com/pscedu/singularity-nanoplot/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-nanoplot/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [ncdu](https://github.com/pscedu/singularity-ncdu) | v2.8 | ![Status](https://github.com/pscedu/singularity-ncdu/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-ncdu/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [ncview](https://github.com/pscedu/singularity-ncview) | v2.1.8 | ![Status](https://github.com/pscedu/singularity-ncview/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-ncview/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [octave](https://github.com/pscedu/singularity-octave) | v7.3.0 | ![Status](https://github.com/pscedu/singularity-octave/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-octave/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | ![Status](https://github.com/pscedu/singularity-pandiff/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-pandiff/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | ![Status](https://github.com/pscedu/singularity-pandoc/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-pandoc/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | ![Status](https://github.com/pscedu/singularity-phylip-suite/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-phylip-suite/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | ![Status](https://github.com/pscedu/singularity-picard/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-picard/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | ![Status](https://github.com/pscedu/singularity-porechop/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-porechop/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [prodigal](https://github.com/pscedu/singularity-prodigal) | v2.6.3 | ![Status](https://github.com/pscedu/singularity-prodigal/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-prodigal/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [raw2ometiff](https://github.com/pscedu/singularity-raw2ometiff) | v3.0.0 | ![Status](https://github.com/pscedu/singularity-raw2ometiff/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-raw2ometiff/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [raxml](https://github.com/pscedu/singularity-raxml) | v8.2.9 | ![Status](https://github.com/pscedu/singularity-raxml/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-raxml/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [rclone](https://github.com/pscedu/singularity-rclone) | v1.70.3 | ![Status](https://github.com/pscedu/singularity-rclone/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-rclone/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [rich-cli](https://github.com/pscedu/singularity-rich-cli) | v1.8.0 | ![Status](https://github.com/pscedu/singularity-rich-cli/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-rich-cli/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [rnaview](https://github.com/pscedu/singularity-rnaview) | v2.0.0 | ![Status](https://github.com/pscedu/singularity-rnaview/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-rnaview/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [rust](https://github.com/pscedu/singularity-rust) | — | ![Status](https://github.com/pscedu/singularity-rust/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-rust/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [salmon](https://github.com/pscedu/singularity-salmon) | — | ![Status](https://github.com/pscedu/singularity-salmon/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-salmon/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [samtools](https://github.com/pscedu/singularity-samtools) | v1.21 | ![Status](https://github.com/pscedu/singularity-samtools/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-samtools/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [shellcheck](https://github.com/pscedu/singularity-shellcheck) | v0.8 | ![Status](https://github.com/pscedu/singularity-shellcheck/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-shellcheck/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [spades](https://github.com/pscedu/singularity-spades) | v3.15.5 | ![Status](https://github.com/pscedu/singularity-spades/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-spades/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [sra-toolkit](https://github.com/pscedu/singularity-sra-toolkit) | v2.11.0 | ![Status](https://github.com/pscedu/singularity-sra-toolkit/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-sra-toolkit/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [star](https://github.com/pscedu/singularity-star) | v2.7.10b | ![Status](https://github.com/pscedu/singularity-star/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-star/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [star-fusion](https://github.com/pscedu/singularity-star-fusion) | v1.11.1 | ![Status](https://github.com/pscedu/singularity-star-fusion/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-star-fusion/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [stride](https://github.com/pscedu/singularity-stride) | v1995 | ![Status](https://github.com/pscedu/singularity-stride/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-stride/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [tiger](https://github.com/pscedu/singularity-tiger) | v5.32.1 | ![Status](https://github.com/pscedu/singularity-tiger/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-tiger/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [timewarrior](https://github.com/pscedu/singularity-timewarrior) | — | ![Status](https://github.com/pscedu/singularity-timewarrior/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-timewarrior/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [trimmomatic](https://github.com/pscedu/singularity-trimmomatic) | 0.39 | ![Status](https://github.com/pscedu/singularity-trimmomatic/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-trimmomatic/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [vcf2maf](https://github.com/pscedu/singularity-vcf2maf) | — | ![Status](https://github.com/pscedu/singularity-vcf2maf/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-vcf2maf/actions/workflows/pretty.yml/badge.svg) |
-| Scientific tool | [viennarna](https://github.com/pscedu/singularity-viennarna) | v2.4.14 | ![Status](https://github.com/pscedu/singularity-viennarna/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-viennarna/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [vim](https://github.com/pscedu/singularity-vim) | v9.1 | ![Status](https://github.com/pscedu/singularity-vim/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-vim/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [visidata](https://github.com/pscedu/singularity-visidata) | v3.2 | ![Status](https://github.com/pscedu/singularity-visidata/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-visidata/actions/workflows/pretty.yml/badge.svg) |
-| Utility | [wordgrinder](https://github.com/pscedu/singularity-wordgrinder) | v0.8 | ![Status](https://github.com/pscedu/singularity-wordgrinder/actions/workflows/main.yml/badge.svg)![Status](https://github.com/pscedu/singularity-wordgrinder/actions/workflows/pretty.yml/badge.svg) |
+| Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |
+| --- | --- | --- | --- | --- | --- | --- |
+| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2023-12-21T12:10:41Z | True | False | False |
+| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | — | 2023-12-22T08:21:30Z | None | False | False |
+| Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2023-12-21T12:18:05Z | True | False | False |
+| Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | 2025-01-03T22:38:54Z | True | True | True |
+| Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2024-12-23T06:22:30Z | True | True | True |
+| Scientific tool | [augustus](https://github.com/pscedu/singularity-augustus) | — | 2023-12-21T12:31:58Z | None | False | False |
+| Utility | [aws-cli](https://github.com/pscedu/singularity-aws-cli) | v2.22.28 | 2025-01-04T00:36:41Z | True | True | True |
+| Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | 2021-08-17T16:24:36Z | True | False | False |
+| Utility | [bat](https://github.com/pscedu/singularity-bat) | v0.24.0 | 2024-03-04T19:53:58Z | True | False | False |
+| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | — | 2021-08-17T16:24:11Z | None | False | False |
+| Scientific tool | [bedops](https://github.com/pscedu/singularity-bedops) | — | 2021-09-18T00:53:44Z | None | False | False |
+| Scientific tool | [bedtools](https://github.com/pscedu/singularity-bedtools) | v2.30.0 | 2023-02-18T05:48:42Z | True | False | False |
+| Scientific tool | [bioformats2raw](https://github.com/pscedu/singularity-bioformats2raw) | v0.9.4 | 2024-08-25T22:16:40Z | True | True | True |
+| Scientific tool | [bismark](https://github.com/pscedu/singularity-bismark) | — | 2021-09-18T01:18:25Z | None | False | False |
+| Scientific tool | [blast](https://github.com/pscedu/singularity-blast) | v2.13.0 | 2022-04-06T13:32:47Z | True | False | False |
+| Scientific tool | [blat](https://github.com/pscedu/singularity-blat) | — | 2023-10-01T22:35:57Z | None | False | False |
+| Scientific tool | [bowtie2](https://github.com/pscedu/singularity-bowtie2) | v2.4.4 | 2022-04-06T15:17:17Z | True | False | False |
+| Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | 2022-05-03T08:15:27Z | True | False | False |
+| Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | 2021-09-09T00:50:40Z | None | False | False |
+| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2022-04-21T21:07:23Z | None | False | False |
+| Utility | [btop](https://github.com/pscedu/singularity-btop) | — | 2021-11-02T03:25:28Z | None | False | False |
+| Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | 2021-12-18T21:52:31Z | True | False | False |
+| Scientific tool | [bwa](https://github.com/pscedu/singularity-bwa) | v0.7.17a | 2023-10-01T04:25:41Z | True | False | False |
+| Scientific tool | [checkm](https://github.com/pscedu/singularity-checkm) | v1.1.3 | 2023-10-01T04:41:09Z | True | False | False |
+| Utility | [circos](https://github.com/pscedu/singularity-circos) | v0.69-9 | 2025-08-06T21:21:36Z | True | True | True |
+| Scientific tool | [cutadapt](https://github.com/pscedu/singularity-cutadapt) | — | 2021-08-17T16:18:41Z | None | False | False |
+| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | 2022-02-17T22:35:33Z | True | False | False |
+| Utility | [dua](https://github.com/pscedu/singularity-dua) | v2.28.0 | 2025-08-06T21:10:23Z | True | True | True |
+| Utility | [dust](https://github.com/pscedu/singularity-dust) | v0.8.4 | 2024-10-24T04:23:36Z | True | True | True |
+| Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | 2021-08-15T01:41:02Z | True | False | False |
+| Scientific tool | [fastq-tools](https://github.com/pscedu/singularity-fastq-tools) | v0.8 | 2022-04-27T14:26:43Z | True | False | False |
+| Scientific tool | [fastqc](https://github.com/pscedu/singularity-fastqc) | v0.12.1 | 2023-10-05T07:35:21Z | True | False | False |
+| Scientific tool | [fasttree](https://github.com/pscedu/singularity-fasttree) | v2.1.11 | 2024-02-08T00:07:57Z | True | False | False |
+| Utility | [fdupes](https://github.com/pscedu/singularity-fdupes) | v2.4.0 | 2025-07-09T18:30:19Z | True | True | True |
+| Utility | [ffmpeg](https://github.com/pscedu/singularity-ffmpeg) | v7.1.1 | 2024-02-08T00:14:32Z | True | True | True |
+| Scientific tool | [filtlong](https://github.com/pscedu/singularity-filtlong) | v0.2.1 | 2024-03-28T15:48:06Z | True | False | False |
+| Utility | [flac](https://github.com/pscedu/singularity-flac) | — | 2025-08-06T20:14:13Z | None | False | False |
+| Scientific tool | [flash](https://github.com/pscedu/singularity-flash) | — | 2021-09-18T01:55:15Z | None | False | False |
+| Scientific tool | [funannotate](https://github.com/pscedu/singularity-funannotate) | — | 2023-05-20T01:44:03Z | None | False | False |
+| Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | 2024-02-08T00:04:57Z | True | False | False |
+| Scientific tool | [genemark-es](https://github.com/pscedu/singularity-genemark-es) | — | 2021-09-11T23:09:40Z | None | False | False |
+| Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | 2023-12-31T23:19:23Z | True | False | False |
+| Remote Desktop Application | [gimp](https://github.com/pscedu/singularity-gimp) | — | — | None | False | False |
+| Utility | [glances](https://github.com/pscedu/singularity-glances) | v3.3.1 | 2023-02-18T05:45:30Z | True | False | False |
+| Utility | [gnuplot](https://github.com/pscedu/singularity-gnuplot) | v6.0 | 2025-08-06T21:10:02Z | True | True | True |
+| Utility | [graphviz](https://github.com/pscedu/singularity-graphviz) | v2.44.0 | 2025-07-23T19:17:10Z | True | True | True |
+| Scientific tool | [guppy](https://github.com/pscedu/singularity-guppy) | — | 2025-01-04T01:32:54Z | None | True | True |
+| Scientific tool | [guppy-gpu](https://github.com/pscedu/singularity-guppy-gpu) | — | 2022-02-07T21:36:18Z | None | False | False |
+| Utility | [hashdeep](https://github.com/pscedu/singularity-hashdeep) | v4.4 | 2024-02-08T00:39:04Z | True | False | False |
+| Scientific tool | [hisat2](https://github.com/pscedu/singularity-hisat2) | v2.2.1 | 2021-08-16T01:50:02Z | True | False | False |
+| Scientific tool | [hmmer](https://github.com/pscedu/singularity-hmmer) | v3.3.1 | 2022-05-30T19:10:25Z | True | False | False |
+| Scientific tool | [htslib](https://github.com/pscedu/singularity-htslib) | v1.13 | 2021-08-17T18:49:01Z | True | False | False |
+| Utility | [hyperfine](https://github.com/pscedu/singularity-hyperfine) | v1.17.0 | 2025-07-23T19:28:10Z | True | False | False |
+| Utility | [imagemagick](https://github.com/pscedu/singularity-imagemagick) | v7.1.1-39 | 2025-08-06T21:09:42Z | True | True | True |
+| Remote Desktop Application | [inkscape](https://github.com/pscedu/singularity-inkscape) | — | — | None | False | False |
+| Utility | [jp](https://github.com/pscedu/singularity-jp) | v0.2.1 | 2022-02-15T05:32:50Z | True | False | False |
+| Utility | [jq](https://github.com/pscedu/singularity-jq) | v1.7.1-r0 | 2023-12-31T06:53:58Z | True | False | False |
+| Scientific tool | [kraken2](https://github.com/pscedu/singularity-kraken2) | — | 2021-08-17T18:49:36Z | None | False | False |
+| Utility | [lazygit](https://github.com/pscedu/singularity-lazygit) | v0.53.0 | 2025-07-23T18:00:43Z | True | True | True |
+| Utility | [libtiff-tools](https://github.com/pscedu/singularity-libtiff-tools) | v4.2.0 | 2022-12-07T02:34:24Z | True | False | False |
+| Utility | [lowcharts](https://github.com/pscedu/singularity-lowcharts) | v0.5.9 | 2025-07-25T17:40:46Z | True | True | True |
+| Utility | [mc](https://github.com/pscedu/singularity-mc) | v4.8.32 | 2025-08-06T21:09:08Z | True | True | True |
+| Scientific tool | [meme-suite](https://github.com/pscedu/singularity-meme-suite) | v5.4.0 | 2022-04-25T15:45:11Z | True | False | False |
+| Scientific tool | [methylpy](https://github.com/pscedu/singularity-methylpy) | v1.4.3 | 2021-08-17T16:34:29Z | False | False | False |
+| Scientific tool | [nanoplot](https://github.com/pscedu/singularity-nanoplot) | v1.42.0 | 2025-04-01T00:06:31Z | True | False | True |
+| Utility | [ncdu](https://github.com/pscedu/singularity-ncdu) | v2.8 | 2025-07-22T14:54:53Z | True | True | True |
+| Scientific tool | [ncview](https://github.com/pscedu/singularity-ncview) | v2.1.8 | 2022-04-08T06:20:57Z | True | False | False |
+| Scientific tool | [octave](https://github.com/pscedu/singularity-octave) | v7.3.0 | 2025-07-28T18:05:42Z | True | False | True |
+| Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2023-09-18T00:13:49Z | True | False | False |
+| Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2024-05-13T21:41:41Z | True | False | False |
+| Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | 2021-08-17T16:32:17Z | False | False | False |
+| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2021-08-15T01:46:37Z | False | False | False |
+| Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | 2024-03-28T02:27:06Z | True | False | False |
+| Scientific tool | [prodigal](https://github.com/pscedu/singularity-prodigal) | v2.6.3 | 2025-08-08T11:38:01Z | True | True | True |
+| Scientific tool | [raw2ometiff](https://github.com/pscedu/singularity-raw2ometiff) | v3.0.0 | 2022-04-04T02:23:54Z | True | False | False |
+| Scientific tool | [raxml](https://github.com/pscedu/singularity-raxml) | v8.2.9 | 2022-02-14T16:28:24Z | True | False | False |
+| Utility | [rclone](https://github.com/pscedu/singularity-rclone) | v1.70.3 | 2025-08-06T20:56:13Z | True | False | False |
+| Utility | [rich-cli](https://github.com/pscedu/singularity-rich-cli) | v1.8.0 | 2022-08-19T03:35:12Z | True | False | False |
+| Scientific tool | [rnaview](https://github.com/pscedu/singularity-rnaview) | v2.0.0 | 2025-08-08T12:25:12Z | True | True | True |
+| Scientific tool | [rust](https://github.com/pscedu/singularity-rust) | — | 2024-01-24T16:21:07Z | None | False | False |
+| Scientific tool | [salmon](https://github.com/pscedu/singularity-salmon) | — | 2021-12-19T08:26:59Z | None | False | False |
+| Scientific tool | [samtools](https://github.com/pscedu/singularity-samtools) | v1.21 | 2024-12-27T19:53:37Z | True | True | True |
+| Utility | [shellcheck](https://github.com/pscedu/singularity-shellcheck) | v0.8 | 2022-04-11T02:11:33Z | True | False | False |
+| Scientific tool | [spades](https://github.com/pscedu/singularity-spades) | v3.15.5 | 2022-07-20T22:46:46Z | True | False | False |
+| Scientific tool | [sra-toolkit](https://github.com/pscedu/singularity-sra-toolkit) | v2.11.0 | 2021-08-17T19:00:45Z | True | False | False |
+| Scientific tool | [star](https://github.com/pscedu/singularity-star) | v2.7.10b | 2022-11-11T02:34:01Z | True | False | False |
+| Scientific tool | [star-fusion](https://github.com/pscedu/singularity-star-fusion) | v1.11.1 | 2022-11-11T03:01:43Z | True | False | False |
+| Scientific tool | [stride](https://github.com/pscedu/singularity-stride) | v1995 | 2025-03-31T03:47:35Z | True | True | True |
+| Scientific tool | [tiger](https://github.com/pscedu/singularity-tiger) | v5.32.1 | 2021-09-18T01:54:15Z | True | False | False |
+| Utility | [timewarrior](https://github.com/pscedu/singularity-timewarrior) | — | — | None | False | False |
+| Scientific tool | [trimmomatic](https://github.com/pscedu/singularity-trimmomatic) | 0.39 | 2021-08-15T01:47:43Z | True | False | False |
+| Scientific tool | [vcf2maf](https://github.com/pscedu/singularity-vcf2maf) | — | 2024-02-08T01:37:55Z | None | False | False |
+| Scientific tool | [viennarna](https://github.com/pscedu/singularity-viennarna) | v2.4.14 | 2021-09-12T00:46:57Z | True | False | False |
+| Utility | [vim](https://github.com/pscedu/singularity-vim) | v9.1 | 2024-02-08T01:33:05Z | True | False | False |
+| Utility | [visidata](https://github.com/pscedu/singularity-visidata) | v3.2 | 2025-08-06T20:07:15Z | True | True | True |
+| Utility | [wordgrinder](https://github.com/pscedu/singularity-wordgrinder) | v0.8 | 2025-08-06T20:05:16Z | True | True | True |
 ---
 Copyright © 2020-2025 Pittsburgh Supercomputing Center. All Rights Reserved.
-
-The [Biomedical Applications Group](https://www.psc.edu/biomedical-applications/) at the [Pittsburgh Supercomputing Center](https://www.psc.edu) in the [Mellon College of Science](https://www.cmu.edu/mcs/) at [Carnegie Mellon University](https://www.cmu.edu).
