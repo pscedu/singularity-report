@@ -42,9 +42,8 @@ UTIL_REPOS = [
 
 HEADER = """# List of Singularity definition files, modulefiles and more
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
-[![](https://imgs.xkcd.com/comics/code_quality.png)](https://xkcd.com/1513/)
 
-This repository lists the Singularity definition files and other files needed to deploy software on Bridges2, HuBMAP HIVE and Brain Image Library.
+This repository lists the Singularity definition files and other files needed to deploy software on Bridges2 and similar systems maintained by the Pittsburgh Supercomputing Center.
 """
 
 FOOTER = f"""---
