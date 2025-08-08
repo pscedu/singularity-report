@@ -5,6 +5,8 @@ on:
     branches: ['**']          # Run on push to any branch
   pull_request:
     branches: ['**']          # Run on PR targeting any branch
+  schedule:
+    - cron: "0 * * * *"       # Run at the start of every hour (UTC)
 
 jobs:
   resources:
