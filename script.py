@@ -93,6 +93,7 @@ def build_row(category_label: str, repo: str, latest: str) -> str:
         f"| {category_label} | [{repo}]({base}) | {latest} | "
         f"![Status]({base}/actions/workflows/main.yml/badge.svg)"
         f"![Status]({base}/actions/workflows/pretty.yml/badge.svg)"
+        f"![Issues](https://img.shields.io/github/issues/{ORG}/{PROJECT_PREFIX}-{repo}) |\n"
     )
 
 def unified_catalog() -> List[Tuple[str, str]]:
