@@ -27,104 +27,24 @@ CURRENT_YEAR = date.today().year
 API_BASE = "https://api.github.com"
 
 STEM_REPOS = [
-    "stride",
-    "nanoplot",
-    "star-fusion",
-    "filtlong",
-    "porechop",
-    "anvio",
-    "funannotate",
-    "fastq-tools",
-    "meme-suite",
-    "braker2",
-    "rust",
-    "guppy",
-    "guppy-gpu",
-    "bsmap",
-    "salmon",
-    "rnaview",
-    "bioformats2raw",
-    "raw2ometiff",
-    "flash",
-    "blat",
-    "bedops",
-    "genemark-es",
-    "augustus",
-    "checkm",
-    "ncview",
-    "bowtie2",
-    "asciigenome",
-    "fastqc",
-    "sra-toolkit",
-    "gatk",
-    "hmmer",
-    "bcftools",
-    "raxml",
-    "spades",
-    "busco",
-    "samtools",
-    "bedtools",
-    "bamtools",
-    "fastani",
-    "phylip-suite",
-    "blast",
-    "viennarna",
-    "cutadapt",
-    "bismark",
-    "star",
-    "prodigal",
-    "bwa",
-    "picard",
-    "hisat2",
-    "abyss",
-    "octave",
-    "tiger",
-    "gent",
-    "methylpy",
-    "fasttree",
-    "vcf2maf",
-    "htslib",
-    "kraken2",
-    "aspera-connect",
-    "trimmomatic",
+    "stride", "nanoplot", "star-fusion", "filtlong", "porechop", "anvio",
+    "funannotate", "fastq-tools", "meme-suite", "braker2", "rust", "guppy",
+    "guppy-gpu", "bsmap", "salmon", "rnaview", "bioformats2raw", "raw2ometiff",
+    "flash", "blat", "bedops", "genemark-es", "augustus", "checkm", "ncview",
+    "bowtie2", "asciigenome", "fastqc", "sra-toolkit", "gatk", "hmmer",
+    "bcftools", "raxml", "spades", "busco", "samtools", "bedtools", "bamtools",
+    "fastani", "phylip-suite", "blast", "viennarna", "cutadapt", "bismark",
+    "star", "prodigal", "bwa", "picard", "hisat2", "abyss", "octave", "tiger",
+    "gent", "methylpy", "fasttree", "vcf2maf", "htslib", "kraken2",
+    "aspera-connect", "trimmomatic",
 ]
 
 UTIL_REPOS = [
-    "hashdeep",
-    "dua",
-    "vim",
-    "timewarrior",
-    "libtiff-tools",
-    "wordgrinder",
-    "shellcheck",
-    "pandiff",
-    "rich-cli",
-    "jq",
-    "jp",
-    "lowcharts",
-    "btop",
-    "aws-cli",
-    "cwltool",
-    "circos",
-    "glances",
-    "fdupes",
-    "graphviz",
-    "browsh",
-    "hyperfine",
-    "dust",
-    "gnuplot",
-    "pandoc",
-    "mc",
-    "bat",
-    "flac",
-    "visidata",
-    "octave",
-    "ncdu",
-    "lazygit",
-    "asciinema",
-    "ffmpeg",
-    "imagemagick",
-    "rclone",
+    "hashdeep", "dua", "vim", "timewarrior", "libtiff-tools", "wordgrinder",
+    "shellcheck", "pandiff", "rich-cli", "jq", "jp", "lowcharts", "btop",
+    "aws-cli", "cwltool", "circos", "glances", "fdupes", "graphviz", "browsh",
+    "hyperfine", "dust", "gnuplot", "pandoc", "mc", "bat", "flac", "visidata",
+    "octave", "ncdu", "lazygit", "asciinema", "ffmpeg", "imagemagick", "rclone",
 ]
 
 VIZ_REPOS = ["gimp", "inkscape"]
@@ -177,19 +97,21 @@ def release_info_for(full_repo: str) -> Tuple[str, Optional[str]]:
 
 
 def last_commit_date_for(full_repo: str) -> str:
-    """Get date of last commit."""
+    """Get date of last commit (YYYY-MM-DD)."""
     try:
         r = SESSION.get(
             f"{API_BASE}/repos/{full_repo}/commits", params={"per_page": 1}, timeout=10
         )
         if r.status_code == 200 and isinstance(r.json(), list) and r.json():
             commit = r.json()[0]
-            date = (
+            date_str = (
                 commit.get("commit", {}).get("committer", {}).get("date")
                 or commit.get("commit", {}).get("author", {}).get("date")
                 or ""
             ).strip()
-            return date or "—"
+            if date_str:
+                return date_str.split("T")[0]  # Keep only YYYY-MM-DD
+            return "—"
     except requests.RequestException:
         pass
     return "—"
@@ -289,31 +211,4 @@ def write_tables() -> None:
                     cat,
                     repo,
                     latest_map[repo],
-                    commit_map[repo],
-                    container_map[repo],
-                    build_map[repo],
-                    publish_map[repo],
-                )
-            )
-        md.write(FOOTER)
-
-    # data.tsv
-    with open(TSV_OUTPUT, "w", encoding="utf-8") as tsv:
-        tsv.write(
-            "Category\tName\tLatest\tLast Commit\tContainer\tBuild ready\tPublishing ready\n"
-        )
-        for cat, repo in items:
-            container_display = (
-                container_map[repo] if container_map[repo] is not None else "None"
-            )
-            tsv.write(
-                f"{cat}\t{repo}\t{latest_map[repo]}\t{commit_map[repo]}\t{container_display}\t{build_map[repo]}\t{publish_map[repo]}\n"
-            )
-
-
-def main() -> None:
-    write_tables()
-
-
-if __name__ == "__main__":
-    main()
+                    commit
