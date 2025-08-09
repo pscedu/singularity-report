@@ -211,4 +211,31 @@ def write_tables() -> None:
                     cat,
                     repo,
                     latest_map[repo],
-                    commit
+                    commit_map[repo],
+                    container_map[repo],
+                    build_map[repo],
+                    publish_map[repo],
+                )
+            )
+        md.write(FOOTER)
+
+    # data.tsv
+    with open(TSV_OUTPUT, "w", encoding="utf-8") as tsv:
+        tsv.write(
+            "Category\tName\tLatest\tLast Commit\tContainer\tBuild ready\tPublishing ready\n"
+        )
+        for cat, repo in items:
+            container_display = (
+                container_map[repo] if container_map[repo] is not None else "None"
+            )
+            tsv.write(
+                f"{cat}\t{repo}\t{latest_map[repo]}\t{commit_map[repo]}\t{container_display}\t{build_map[repo]}\t{publish_map[repo]}\n"
+            )
+
+
+def main() -> None:
+    write_tables()
+
+
+if __name__ == "__main__":
+    main()
