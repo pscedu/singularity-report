@@ -58,7 +58,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [htslib](https://github.com/pscedu/singularity-htslib) | v1.13 | 2021-08-17 | True | False | False |
 | Utility | [hyperfine](https://github.com/pscedu/singularity-hyperfine) | v1.17.0 | 2025-07-23 | True | False | False |
 | Utility | [imagemagick](https://github.com/pscedu/singularity-imagemagick) | v7.1.1-39 | 2025-08-06 | True | True | True |
-| Remote Desktop Application | [inkscape](https://github.com/pscedu/singularity-inkscape) | — | 2025-08-10 | None | False | True |
+| Remote Desktop Application | [inkscape](https://github.com/pscedu/singularity-inkscape) | — | 2025-08-10 | None | True | True |
 | Utility | [jp](https://github.com/pscedu/singularity-jp) | v0.2.1 | 2022-02-15 | True | False | False |
 | Utility | [jq](https://github.com/pscedu/singularity-jq) | v1.7.1-r0 | 2023-12-31 | True | False | False |
 | Scientific tool | [kraken2](https://github.com/pscedu/singularity-kraken2) | — | 2021-08-17 | None | False | False |
