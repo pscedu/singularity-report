@@ -75,15 +75,15 @@ This repository lists the Singularity definition files and other files needed to
 | Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2023-09-18 | ✅ | ❌ | ❌ |
 | Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2024-05-13 | ✅ | ❌ | ❌ |
 | Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | 2021-08-17 | ❌ | ❌ | ❌ |
-| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2021-08-15 | ❌ | ❌ | ❌ |
+| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2025-08-11 | ❌ | ✅ | ✅ |
 | Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | 2024-03-28 | ✅ | ❌ | ❌ |
 | Scientific tool | [prodigal](https://github.com/pscedu/singularity-prodigal) | v2.6.3 | 2025-08-08 | ✅ | ✅ | ✅ |
 | Scientific tool | [raw2ometiff](https://github.com/pscedu/singularity-raw2ometiff) | v3.0.0 | 2022-04-04 | ✅ | ❌ | ❌ |
 | Scientific tool | [raxml](https://github.com/pscedu/singularity-raxml) | v8.2.9 | 2022-02-14 | ✅ | ❌ | ❌ |
-| Utility | [rclone](https://github.com/pscedu/singularity-rclone) | v1.70.3 | 2025-08-06 | ✅ | ❌ | ❌ |
+| Utility | [rclone](https://github.com/pscedu/singularity-rclone) | v1.70.3 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [rich-cli](https://github.com/pscedu/singularity-rich-cli) | v1.8.0 | 2022-08-19 | ✅ | ❌ | ❌ |
 | Scientific tool | [rnaview](https://github.com/pscedu/singularity-rnaview) | v2.0.0 | 2025-08-08 | ✅ | ✅ | ✅ |
-| Scientific tool | [rust](https://github.com/pscedu/singularity-rust) | — | 2024-01-24 | None | ❌ | ❌ |
+| Scientific tool | [rust](https://github.com/pscedu/singularity-rust) | v1.75.0 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [salmon](https://github.com/pscedu/singularity-salmon) | — | 2021-12-19 | None | ❌ | ❌ |
 | Scientific tool | [samtools](https://github.com/pscedu/singularity-samtools) | v1.21 | 2024-12-27 | ✅ | ✅ | ✅ |
 | Utility | [shellcheck](https://github.com/pscedu/singularity-shellcheck) | v0.8 | 2022-04-11 | ✅ | ❌ | ❌ |

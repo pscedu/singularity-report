@@ -70,15 +70,15 @@ Scientific tool	octave	v7.3.0	2025-07-28	True	False	True
 Utility	pandiff	v0.6.0	2023-09-18	True	False	False
 Utility	pandoc	v2.18	2024-05-13	True	False	False
 Scientific tool	phylip-suite	v3.697	2021-08-17	False	False	False
-Scientific tool	picard	v2.23.2	2021-08-15	False	False	False
+Scientific tool	picard	v2.23.2	2025-08-11	False	True	True
 Scientific tool	porechop	v0.2.4	2024-03-28	True	False	False
 Scientific tool	prodigal	v2.6.3	2025-08-08	True	True	True
 Scientific tool	raw2ometiff	v3.0.0	2022-04-04	True	False	False
 Scientific tool	raxml	v8.2.9	2022-02-14	True	False	False
-Utility	rclone	v1.70.3	2025-08-06	True	False	False
+Utility	rclone	v1.70.3	2025-08-11	True	True	True
 Utility	rich-cli	v1.8.0	2022-08-19	True	False	False
 Scientific tool	rnaview	v2.0.0	2025-08-08	True	True	True
-Scientific tool	rust	—	2024-01-24	None	False	False
+Scientific tool	rust	v1.75.0	2025-08-11	True	True	True
 Scientific tool	salmon	—	2021-12-19	None	False	False
 Scientific tool	samtools	v1.21	2024-12-27	True	True	True
 Utility	shellcheck	v0.8	2022-04-11	True	False	False
