@@ -135,6 +135,16 @@ def workflow_status(full_repo: str, workflow_file: str) -> str:
 
 
 # ── Table helpers ──────────────────────────────────────────────────────────────
+def format_status(value: Optional[str]) -> str:
+    """Return emoji check/cross for True/False, else the original string."""
+    if value == "True":
+        return "✅"
+    elif value == "False":
+        return "❌"
+    elif value is None:
+        return "None"
+    return value
+
 def build_row(
     category_label: str,
     repo: str,
@@ -145,8 +155,11 @@ def build_row(
     publish_ready: str,
 ) -> str:
     base = f"https://github.com/{ORG}/{PROJECT_PREFIX}-{repo}"
-    container_display = container_status if container_status is not None else "None"
-    return f"| {category_label} | [{repo}]({base}) | {latest} | {last_commit} | {container_display} | {build_ready} | {publish_ready} |\n"
+    container_display = format_status(container_status)
+    return (
+        f"| {category_label} | [{repo}]({base}) | {latest} | {last_commit} | "
+        f"{container_display} | {format_status(build_ready)} | {format_status(publish_ready)} |\n"
+    )
 
 
 def unified_catalog() -> List[Tuple[str, str]]:
