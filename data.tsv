@@ -14,11 +14,11 @@ Scientific tool	bedtools	v2.30.0	2023-02-18	True	False	False
 Scientific tool	bioformats2raw	v0.9.4	2024-08-25	True	True	True
 Scientific tool	bismark	—	2021-09-18	None	False	False
 Scientific tool	blast	v2.13.0	2022-04-06	True	False	False
-Scientific tool	blat	—	2023-10-01	None	False	False
+Scientific tool	blat	v36	2023-10-01	True	True	True
 Scientific tool	bowtie2	v2.4.4	2022-04-06	True	False	False
 Scientific tool	braker2	v2.1.6	2022-05-03	True	False	False
 Utility	browsh	—	2021-09-09	None	False	False
-Scientific tool	bsmap	—	2022-04-21	None	False	False
+Scientific tool	bsmap	—	2025-08-11	None	False	False
 Utility	btop	—	2021-11-02	None	False	False
 Scientific tool	busco	v5.2.2	2021-12-18	True	False	False
 Scientific tool	bwa	v0.7.17a	2023-10-01	True	False	False

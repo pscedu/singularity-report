@@ -19,11 +19,11 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [bioformats2raw](https://github.com/pscedu/singularity-bioformats2raw) | v0.9.4 | 2024-08-25 | True | True | True |
 | Scientific tool | [bismark](https://github.com/pscedu/singularity-bismark) | — | 2021-09-18 | None | False | False |
 | Scientific tool | [blast](https://github.com/pscedu/singularity-blast) | v2.13.0 | 2022-04-06 | True | False | False |
-| Scientific tool | [blat](https://github.com/pscedu/singularity-blat) | — | 2023-10-01 | None | False | False |
+| Scientific tool | [blat](https://github.com/pscedu/singularity-blat) | v36 | 2023-10-01 | True | True | True |
 | Scientific tool | [bowtie2](https://github.com/pscedu/singularity-bowtie2) | v2.4.4 | 2022-04-06 | True | False | False |
 | Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | 2022-05-03 | True | False | False |
 | Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | 2021-09-09 | None | False | False |
-| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2022-04-21 | None | False | False |
+| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2025-08-11 | None | False | False |
 | Utility | [btop](https://github.com/pscedu/singularity-btop) | — | 2021-11-02 | None | False | False |
 | Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | 2021-12-18 | True | False | False |
 | Scientific tool | [bwa](https://github.com/pscedu/singularity-bwa) | v0.7.17a | 2023-10-01 | True | False | False |
