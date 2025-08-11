@@ -11,29 +11,29 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2024-12-23 | ✅ | ✅ | ✅ |
 | Scientific tool | [augustus](https://github.com/pscedu/singularity-augustus) | v3.5 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [aws-cli](https://github.com/pscedu/singularity-aws-cli) | v2.22.28 | 2025-01-04 | ✅ | ✅ | ✅ |
-| Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | 2021-08-17 | ✅ | ❌ | ❌ |
+| Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [bat](https://github.com/pscedu/singularity-bat) | v0.24.0 | 2024-03-04 | ✅ | ❌ | ❌ |
-| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | v1.10.2 | 2025-08-11 | ✅ | ❌ | ❌ |
-| Scientific tool | [bedops](https://github.com/pscedu/singularity-bedops) | — | 2021-09-18 | None | ❌ | ❌ |
-| Scientific tool | [bedtools](https://github.com/pscedu/singularity-bedtools) | v2.30.0 | 2023-02-18 | ✅ | ❌ | ❌ |
+| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | v1.10.2 | 2025-08-11 | ✅ | ✅ | ✅ |
+| Scientific tool | [bedops](https://github.com/pscedu/singularity-bedops) | — | 2025-08-11 | None | ✅ | ✅ |
+| Scientific tool | [bedtools](https://github.com/pscedu/singularity-bedtools) | v2.30.0 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [bioformats2raw](https://github.com/pscedu/singularity-bioformats2raw) | v0.9.4 | 2024-08-25 | ✅ | ✅ | ✅ |
-| Scientific tool | [bismark](https://github.com/pscedu/singularity-bismark) | — | 2021-09-18 | None | ❌ | ❌ |
-| Scientific tool | [blast](https://github.com/pscedu/singularity-blast) | v2.13.0 | 2022-04-06 | ✅ | ❌ | ❌ |
+| Scientific tool | [bismark](https://github.com/pscedu/singularity-bismark) | — | 2025-08-11 | None | ✅ | ✅ |
+| Scientific tool | [blast](https://github.com/pscedu/singularity-blast) | v2.13.0 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [blat](https://github.com/pscedu/singularity-blat) | v36 | 2025-08-11 | ✅ | ✅ | ✅ |
-| Scientific tool | [bowtie2](https://github.com/pscedu/singularity-bowtie2) | v2.4.4 | 2022-04-06 | ✅ | ❌ | ❌ |
-| Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | 2022-05-03 | ✅ | ❌ | ❌ |
-| Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | 2021-09-09 | None | ❌ | ❌ |
-| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2025-08-11 | None | ❌ | ❌ |
-| Utility | [btop](https://github.com/pscedu/singularity-btop) | — | 2021-11-02 | None | ❌ | ❌ |
-| Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | 2021-12-18 | ✅ | ❌ | ❌ |
+| Scientific tool | [bowtie2](https://github.com/pscedu/singularity-bowtie2) | v2.4.4 | 2025-08-11 | ✅ | ✅ | ✅ |
+| Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | 2025-08-11 | ✅ | ✅ | ✅ |
+| Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | 2025-08-11 | None | ✅ | ✅ |
+| Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2025-08-11 | None | ❌ | ✅ |
+| Utility | [btop](https://github.com/pscedu/singularity-btop) | — | 2025-08-11 | None | ✅ | ✅ |
+| Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [bwa](https://github.com/pscedu/singularity-bwa) | v0.7.17a | 2023-10-01 | ✅ | ❌ | ❌ |
 | Scientific tool | [checkm](https://github.com/pscedu/singularity-checkm) | v1.1.3 | 2023-10-01 | ✅ | ❌ | ❌ |
 | Utility | [circos](https://github.com/pscedu/singularity-circos) | v0.69-9 | 2025-08-06 | ✅ | ✅ | ✅ |
-| Scientific tool | [cutadapt](https://github.com/pscedu/singularity-cutadapt) | — | 2021-08-17 | None | ❌ | ❌ |
-| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | 2022-02-17 | ✅ | ❌ | ❌ |
+| Scientific tool | [cutadapt](https://github.com/pscedu/singularity-cutadapt) | — | 2025-08-11 | None | ✅ | ✅ |
+| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | 2025-08-11 | ✅ | ❌ | ✅ |
 | Utility | [dua](https://github.com/pscedu/singularity-dua) | v2.28.0 | 2025-08-06 | ✅ | ✅ | ✅ |
 | Utility | [dust](https://github.com/pscedu/singularity-dust) | v0.8.4 | 2024-10-24 | ✅ | ✅ | ✅ |
-| Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | 2021-08-15 | ✅ | ❌ | ❌ |
+| Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | 2025-08-11 | ✅ | ❌ | ❌ |
 | Scientific tool | [fastq-tools](https://github.com/pscedu/singularity-fastq-tools) | v0.8 | 2022-04-27 | ✅ | ❌ | ❌ |
 | Scientific tool | [fastqc](https://github.com/pscedu/singularity-fastqc) | v0.12.1 | 2023-10-05 | ✅ | ❌ | ❌ |
 | Scientific tool | [fasttree](https://github.com/pscedu/singularity-fasttree) | v2.1.11 | 2024-02-08 | ✅ | ❌ | ❌ |
