@@ -5,7 +5,7 @@ This repository lists the Singularity definition files and other files needed to
 | Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |
 | --- | --- | --- | --- | --- | --- | --- |
 | Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2023-12-21 | True | False | False |
-| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | — | 2023-12-22 | None | False | False |
+| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | v8 | 2023-12-22 | False | False | True |
 | Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2023-12-21 | True | False | False |
 | Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | 2025-01-03 | True | True | True |
 | Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2024-12-23 | True | True | True |
@@ -13,7 +13,7 @@ This repository lists the Singularity definition files and other files needed to
 | Utility | [aws-cli](https://github.com/pscedu/singularity-aws-cli) | v2.22.28 | 2025-01-04 | True | True | True |
 | Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | 2021-08-17 | True | False | False |
 | Utility | [bat](https://github.com/pscedu/singularity-bat) | v0.24.0 | 2024-03-04 | True | False | False |
-| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | — | 2021-08-17 | None | False | False |
+| Scientific tool | [bcftools](https://github.com/pscedu/singularity-bcftools) | v1.10.2 | 2025-08-11 | True | False | False |
 | Scientific tool | [bedops](https://github.com/pscedu/singularity-bedops) | — | 2021-09-18 | None | False | False |
 | Scientific tool | [bedtools](https://github.com/pscedu/singularity-bedtools) | v2.30.0 | 2023-02-18 | True | False | False |
 | Scientific tool | [bioformats2raw](https://github.com/pscedu/singularity-bioformats2raw) | v0.9.4 | 2024-08-25 | True | True | True |
