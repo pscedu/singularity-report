@@ -4,7 +4,7 @@ Scientific tool	anvio	—	2023-12-22	None	False	False
 Scientific tool	asciigenome	v1.17.0	2023-12-21	True	False	False
 Utility	asciinema	v2.3.0	2025-01-03	True	True	True
 Scientific tool	aspera-connect	v4.1.12	2024-12-23	True	True	True
-Scientific tool	augustus	—	2023-12-21	None	False	False
+Scientific tool	augustus	v3.5	2025-08-11	True	True	True
 Utility	aws-cli	v2.22.28	2025-01-04	True	True	True
 Scientific tool	bamtools	v2.5.2	2021-08-17	True	False	False
 Utility	bat	v0.24.0	2024-03-04	True	False	False
@@ -53,7 +53,7 @@ Scientific tool	hmmer	v3.3.1	2022-05-30	True	False	False
 Scientific tool	htslib	v1.13	2021-08-17	True	False	False
 Utility	hyperfine	v1.17.0	2025-07-23	True	False	False
 Utility	imagemagick	v7.1.1-39	2025-08-06	True	True	True
-Remote Desktop Application	inkscape	—	2025-08-10	None	True	True
+Remote Desktop Application	inkscape	v1.2.2	2025-08-10	True	True	True
 Utility	jp	v0.2.1	2022-02-15	True	False	False
 Utility	jq	v1.7.1-r0	2023-12-31	True	False	False
 Scientific tool	kraken2	—	2021-08-17	None	False	False
