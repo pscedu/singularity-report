@@ -40,7 +40,7 @@ STEM_REPOS = [
 ]
 
 UTIL_REPOS = [
-    "hashdeep", "dua", "vim", "timewarrior", "libtiff-tools", "wordgrinder",
+    "hashdeep", "dua", "vim", "libtiff-tools", "wordgrinder",
     "shellcheck", "pandiff", "rich-cli", "jq", "jp", "lowcharts", "btop",
     "aws-cli", "cwltool", "circos", "glances", "fdupes", "graphviz", "browsh",
     "hyperfine", "dust", "gnuplot", "pandoc", "mc", "bat", "flac", "visidata",
