@@ -1,7 +1,7 @@
 Category	Name	Latest	Last Commit	Container	Build ready	Publishing ready
-Scientific tool	abyss	v2.1.5	2023-12-21	True	False	False
+Scientific tool	abyss	v2.1.5	2025-08-11	True	False	True
 Scientific tool	anvio	v8	2023-12-22	False	False	True
-Scientific tool	asciigenome	v1.17.0	2023-12-21	True	False	False
+Scientific tool	asciigenome	v1.17.0	2025-08-11	True	True	True
 Utility	asciinema	v2.3.0	2025-01-03	True	True	True
 Scientific tool	aspera-connect	v4.1.12	2024-12-23	True	True	True
 Scientific tool	augustus	v3.5	2025-08-11	True	True	True
@@ -38,7 +38,7 @@ Scientific tool	filtlong	v0.2.1	2024-03-28	True	False	False
 Utility	flac	—	2025-08-11	None	False	True
 Scientific tool	flash	—	2025-08-11	None	True	True
 Scientific tool	funannotate	—	2023-05-20	None	False	False
-Scientific tool	gatk	v4.2.0.0	2024-02-08	True	False	False
+Scientific tool	gatk	v4.2.0.0	2025-08-11	True	True	True
 Scientific tool	genemark-es	—	2025-08-11	None	False	True
 Scientific tool	gent	v1.0.0	2023-12-31	True	False	False
 Remote Desktop Application	gimp	v3.0.4	2025-08-09	True	True	True

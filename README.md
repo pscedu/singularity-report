@@ -4,9 +4,9 @@
 This repository lists the Singularity definition files and other files needed to deploy software on Bridges2 and similar systems maintained by the Pittsburgh Supercomputing Center.
 | Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |
 | --- | --- | --- | --- | --- | --- | --- |
-| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2023-12-21 | ✅ | ❌ | ❌ |
+| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2025-08-11 | ✅ | ❌ | ✅ |
 | Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | v8 | 2023-12-22 | ❌ | ❌ | ✅ |
-| Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2023-12-21 | ✅ | ❌ | ❌ |
+| Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | 2025-01-03 | ✅ | ✅ | ✅ |
 | Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2024-12-23 | ✅ | ✅ | ✅ |
 | Scientific tool | [augustus](https://github.com/pscedu/singularity-augustus) | v3.5 | 2025-08-11 | ✅ | ✅ | ✅ |
@@ -43,7 +43,7 @@ This repository lists the Singularity definition files and other files needed to
 | Utility | [flac](https://github.com/pscedu/singularity-flac) | — | 2025-08-11 | None | ❌ | ✅ |
 | Scientific tool | [flash](https://github.com/pscedu/singularity-flash) | — | 2025-08-11 | None | ✅ | ✅ |
 | Scientific tool | [funannotate](https://github.com/pscedu/singularity-funannotate) | — | 2023-05-20 | None | ❌ | ❌ |
-| Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | 2024-02-08 | ✅ | ❌ | ❌ |
+| Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [genemark-es](https://github.com/pscedu/singularity-genemark-es) | — | 2025-08-11 | None | ❌ | ✅ |
 | Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | 2023-12-31 | ✅ | ❌ | ❌ |
 | Remote Desktop Application | [gimp](https://github.com/pscedu/singularity-gimp) | v3.0.4 | 2025-08-09 | ✅ | ✅ | ✅ |
