@@ -18,7 +18,7 @@ Scientific tool	blat	v36	2025-08-11	True	True	True
 Scientific tool	bowtie2	v2.4.4	2025-08-11	True	True	True
 Scientific tool	braker2	v2.1.6	2025-08-11	True	True	True
 Utility	browsh	—	2025-08-11	None	True	True
-Scientific tool	bsmap	—	2025-08-11	None	False	True
+Scientific tool	bsmap	—	2025-08-11	None	True	True
 Utility	btop	—	2025-08-11	None	True	True
 Scientific tool	busco	v5.2.2	2025-08-11	True	True	True
 Scientific tool	bwa	v0.7.17a	2023-10-01	True	False	False
@@ -28,70 +28,69 @@ Scientific tool	cutadapt	—	2025-08-11	None	True	True
 Utility	cwltool	v3.1.20211020155521	2025-08-11	True	False	True
 Utility	dua	v2.28.0	2025-08-06	True	True	True
 Utility	dust	v0.8.4	2024-10-24	True	True	True
-Scientific tool	fastani	v1.3.3	2025-08-11	True	False	False
-Scientific tool	fastq-tools	v0.8	2022-04-27	True	False	False
-Scientific tool	fastqc	v0.12.1	2023-10-05	True	False	False
+Scientific tool	fastani	v1.3.3	2025-08-11	True	True	True
+Scientific tool	fastq-tools	v0.8	2025-08-11	True	True	True
+Scientific tool	fastqc	v0.12.1	2025-08-11	True	True	True
 Scientific tool	fasttree	v2.1.11	2024-02-08	True	False	False
 Utility	fdupes	v2.4.0	2025-07-09	True	True	True
 Utility	ffmpeg	v7.1.1	2024-02-08	True	True	True
 Scientific tool	filtlong	v0.2.1	2024-03-28	True	False	False
-Utility	flac	—	2025-08-06	None	False	False
-Scientific tool	flash	—	2021-09-18	None	False	False
+Utility	flac	—	2025-08-11	None	False	True
+Scientific tool	flash	—	2025-08-11	None	True	True
 Scientific tool	funannotate	—	2023-05-20	None	False	False
 Scientific tool	gatk	v4.2.0.0	2024-02-08	True	False	False
-Scientific tool	genemark-es	—	2021-09-11	None	False	False
+Scientific tool	genemark-es	—	2025-08-11	None	False	True
 Scientific tool	gent	v1.0.0	2023-12-31	True	False	False
 Remote Desktop Application	gimp	v3.0.4	2025-08-09	True	True	True
-Utility	glances	v3.3.1	2023-02-18	True	False	False
+Utility	glances	v3.3.1	2025-08-11	True	True	True
 Utility	gnuplot	v6.0	2025-08-06	True	True	True
 Utility	graphviz	v2.44.0	2025-07-23	True	True	True
 Scientific tool	guppy	—	2025-01-04	None	True	True
-Scientific tool	guppy-gpu	—	2022-02-07	None	False	False
+Scientific tool	guppy-gpu	—	2025-08-11	None	True	True
 Utility	hashdeep	v4.4	2024-02-08	True	False	False
-Scientific tool	hisat2	v2.2.1	2021-08-16	True	False	False
-Scientific tool	hmmer	v3.3.1	2022-05-30	True	False	False
-Scientific tool	htslib	v1.13	2021-08-17	True	False	False
+Scientific tool	hisat2	v2.2.1	2025-08-11	True	True	True
+Scientific tool	hmmer	v3.3.1	2025-08-11	True	True	True
+Scientific tool	htslib	v1.13	2025-08-11	True	True	True
 Utility	hyperfine	v1.17.0	2025-07-23	True	False	False
 Utility	imagemagick	v7.1.1-39	2025-08-06	True	True	True
 Remote Desktop Application	inkscape	v1.2.2	2025-08-10	True	True	True
-Utility	jp	v0.2.1	2022-02-15	True	False	False
+Utility	jp	v0.2.1	2025-08-11	True	True	True
 Utility	jq	v1.7.1-r0	2023-12-31	True	False	False
-Scientific tool	kraken2	—	2021-08-17	None	False	False
+Scientific tool	kraken2	—	2025-08-11	None	True	True
 Utility	lazygit	v0.53.0	2025-07-23	True	True	True
-Utility	libtiff-tools	v4.2.0	2022-12-07	True	False	False
+Utility	libtiff-tools	v4.2.0	2025-08-11	True	True	True
 Utility	lowcharts	v0.5.9	2025-07-25	True	True	True
 Utility	mc	v4.8.32	2025-08-06	True	True	True
-Scientific tool	meme-suite	v5.4.0	2022-04-25	True	False	False
-Scientific tool	methylpy	v1.4.3	2021-08-17	False	False	False
+Scientific tool	meme-suite	v5.4.0	2025-08-11	True	True	True
+Scientific tool	methylpy	v1.4.3	2025-08-11	False	True	True
 Scientific tool	nanoplot	v1.42.0	2025-04-01	True	False	True
 Utility	ncdu	v2.8	2025-07-22	True	True	True
-Scientific tool	ncview	v2.1.8	2022-04-08	True	False	False
+Scientific tool	ncview	v2.1.8	2025-08-11	True	True	True
 Scientific tool	octave	v7.3.0	2025-07-28	True	False	True
-Utility	pandiff	v0.6.0	2023-09-18	True	False	False
-Utility	pandoc	v2.18	2024-05-13	True	False	False
-Scientific tool	phylip-suite	v3.697	2021-08-17	False	False	False
+Utility	pandiff	v0.6.0	2025-08-11	True	False	True
+Utility	pandoc	v2.18	2025-08-11	True	True	True
+Scientific tool	phylip-suite	v3.697	2025-08-11	False	True	True
 Scientific tool	picard	v2.23.2	2025-08-11	False	True	True
 Scientific tool	porechop	v0.2.4	2024-03-28	True	False	False
 Scientific tool	prodigal	v2.6.3	2025-08-08	True	True	True
-Scientific tool	raw2ometiff	v3.0.0	2022-04-04	True	False	False
-Scientific tool	raxml	v8.2.9	2022-02-14	True	False	False
+Scientific tool	raw2ometiff	v3.0.0	2025-08-11	True	False	True
+Scientific tool	raxml	v8.2.9	2025-08-11	True	True	True
 Utility	rclone	v1.70.3	2025-08-11	True	True	True
-Utility	rich-cli	v1.8.0	2022-08-19	True	False	False
+Utility	rich-cli	v1.8.0	2025-08-11	True	True	True
 Scientific tool	rnaview	v2.0.0	2025-08-08	True	True	True
 Scientific tool	rust	v1.75.0	2025-08-11	True	True	True
-Scientific tool	salmon	—	2021-12-19	None	False	False
+Scientific tool	salmon	—	2025-08-11	None	False	True
 Scientific tool	samtools	v1.21	2024-12-27	True	True	True
-Utility	shellcheck	v0.8	2022-04-11	True	False	False
-Scientific tool	spades	v3.15.5	2022-07-20	True	False	False
-Scientific tool	sra-toolkit	v2.11.0	2021-08-17	True	False	False
-Scientific tool	star	v2.7.10b	2022-11-11	True	False	False
-Scientific tool	star-fusion	v1.11.1	2022-11-11	True	False	False
+Utility	shellcheck	v0.8	2025-08-11	True	True	True
+Scientific tool	spades	v3.15.5	2025-08-11	True	True	True
+Scientific tool	sra-toolkit	v2.11.0	2025-08-11	True	True	True
+Scientific tool	star	v2.7.10b	2025-08-11	True	True	True
+Scientific tool	star-fusion	v1.11.1	2025-08-11	True	True	True
 Scientific tool	stride	v1995	2025-03-31	True	True	True
-Scientific tool	tiger	v5.32.1	2021-09-18	True	False	False
-Utility	timewarrior	—	—	None	False	False
-Scientific tool	trimmomatic	0.39	2021-08-15	True	False	False
+Scientific tool	tiger	v5.32.1	2025-08-11	True	False	True
+Scientific tool	trimmomatic	0.39	2025-08-11	True	True	True
 Scientific tool	vcf2maf	—	2024-02-08	None	False	False
-Scientific tool	viennarna	v2.4.14	2021-09-12	True	False	False
+Scientific tool	viennarna	v2.4.14	2025-08-11	True	True	True
 Utility	vim	v9.1	2024-02-08	True	False	False
 Utility	visidata	v3.2	2025-08-06	True	True	True
 Utility	wordgrinder	v0.8	2025-08-06	True	True	True
