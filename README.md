@@ -30,7 +30,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [checkm](https://github.com/pscedu/singularity-checkm) | v1.1.3 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [circos](https://github.com/pscedu/singularity-circos) | v0.69-9 | 2025-08-06 | ✅ | ✅ | ✅ |
 | Scientific tool | [cutadapt](https://github.com/pscedu/singularity-cutadapt) | — | 2025-08-11 | None | ✅ | ✅ |
-| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | 2025-08-11 | ✅ | ❌ | ✅ |
+| Utility | [cwltool](https://github.com/pscedu/singularity-cwltool) | v3.1.20211020155521 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [dua](https://github.com/pscedu/singularity-dua) | v2.28.0 | 2025-08-06 | ✅ | ✅ | ✅ |
 | Utility | [dust](https://github.com/pscedu/singularity-dust) | v0.8.4 | 2024-10-24 | ✅ | ✅ | ✅ |
 | Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | 2025-08-11 | ✅ | ✅ | ✅ |
@@ -96,7 +96,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [trimmomatic](https://github.com/pscedu/singularity-trimmomatic) | 0.39 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Scientific tool | [vcf2maf](https://github.com/pscedu/singularity-vcf2maf) | — | 2025-08-11 | None | ✅ | ✅ |
 | Scientific tool | [viennarna](https://github.com/pscedu/singularity-viennarna) | v2.4.14 | 2025-08-11 | ✅ | ✅ | ✅ |
-| Utility | [vim](https://github.com/pscedu/singularity-vim) | v9.1 | 2025-08-11 | ✅ | ✅ | ❌ |
+| Utility | [vim](https://github.com/pscedu/singularity-vim) | v9.1 | 2025-08-11 | ✅ | ✅ | ✅ |
 | Utility | [visidata](https://github.com/pscedu/singularity-visidata) | v3.2 | 2025-08-06 | ✅ | ✅ | ✅ |
 | Utility | [wordgrinder](https://github.com/pscedu/singularity-wordgrinder) | v0.8 | 2025-08-06 | ✅ | ✅ | ✅ |
 ---
