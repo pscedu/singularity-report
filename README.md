@@ -75,6 +75,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [octave](https://github.com/pscedu/singularity-octave) | v7.3.0 | 2025-08-12 | ✅ | ❌ | ✅ |
 | Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2025-08-12 | ✅ | ❌ | ✅ |
 | Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2025-08-12 | ✅ | ✅ | ✅ |
+| Utility | [papis](https://github.com/pscedu/singularity-papis) | — | 2025-08-12 | None | ❌ | ❌ |
 | Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | 2025-08-12 | ❌ | ✅ | ✅ |
 | Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2025-08-12 | ❌ | ✅ | ✅ |
 | Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | 2025-08-12 | ✅ | ❌ | ✅ |

@@ -70,6 +70,7 @@ Scientific tool	ncview	v2.1.8	2025-08-12	True	True	True
 Scientific tool	octave	v7.3.0	2025-08-12	True	False	True
 Utility	pandiff	v0.6.0	2025-08-12	True	False	True
 Utility	pandoc	v2.18	2025-08-12	True	True	True
+Utility	papis	—	2025-08-12	None	False	False
 Scientific tool	phylip-suite	v3.697	2025-08-12	False	True	True
 Scientific tool	picard	v2.23.2	2025-08-12	False	True	True
 Scientific tool	porechop	v0.2.4	2025-08-12	True	False	True
