@@ -1,58 +1,58 @@
 Category	Name	Latest	Last Commit	Container	Build ready	Publishing ready
-Scientific tool	abyss	v2.1.5	2025-08-11	True	False	True
-Scientific tool	anvio	v8	2023-12-22	False	False	True
-Scientific tool	asciigenome	v1.17.0	2025-08-11	True	True	True
-Utility	asciinema	v2.3.0	2025-01-03	True	True	True
-Scientific tool	aspera-connect	v4.1.12	2024-12-23	True	True	True
-Scientific tool	augustus	v3.5	2025-08-11	True	True	True
-Utility	aws-cli	v2.22.28	2025-01-04	True	True	True
-Scientific tool	bamtools	v2.5.2	2025-08-11	True	True	True
-Utility	bat	v0.24.0	2025-08-11	True	True	True
-Scientific tool	bcftools	v1.10.2	2025-08-11	True	True	True
-Scientific tool	bedops	—	2025-08-11	None	True	True
-Scientific tool	bedtools	v2.30.0	2025-08-11	True	True	True
-Scientific tool	bioformats2raw	v0.9.4	2024-08-25	True	True	True
-Scientific tool	bismark	—	2025-08-11	None	True	True
-Scientific tool	blast	v2.13.0	2025-08-11	True	True	True
-Scientific tool	blat	v36	2025-08-11	True	True	True
-Scientific tool	bowtie2	v2.4.4	2025-08-11	True	True	True
-Scientific tool	braker2	v2.1.6	2025-08-11	True	True	True
-Utility	browsh	—	2025-08-11	None	True	True
-Scientific tool	bsmap	—	2025-08-11	None	True	True
-Utility	btop	—	2025-08-11	None	True	True
-Scientific tool	busco	v5.2.2	2025-08-11	True	True	True
-Scientific tool	bwa	v0.7.17a	2025-08-11	True	True	True
-Scientific tool	checkm	v1.1.3	2025-08-11	True	True	True
-Utility	circos	v0.69-9	2025-08-06	True	True	True
-Scientific tool	cutadapt	—	2025-08-11	None	True	True
+Scientific tool	abyss	v2.1.5	2025-08-12	True	False	False
+Scientific tool	anvio	v8	2025-08-12	False	False	True
+Scientific tool	asciigenome	v1.17.0	2025-08-12	True	True	True
+Utility	asciinema	v2.3.0	2025-08-12	True	True	True
+Scientific tool	aspera-connect	v4.1.12	2025-08-12	True	True	True
+Scientific tool	augustus	v3.5	2025-08-12	True	True	True
+Utility	aws-cli	v2.22.28	2025-08-12	True	True	True
+Scientific tool	bamtools	v2.5.2	2025-08-12	True	True	True
+Utility	bat	v0.24.0	2025-08-12	True	True	True
+Scientific tool	bcftools	v1.10.2	2025-08-12	True	True	True
+Scientific tool	bedops	—	2025-08-12	None	True	True
+Scientific tool	bedtools	v2.30.0	2025-08-12	True	True	True
+Scientific tool	bioformats2raw	v0.9.4	2025-08-12	True	True	True
+Scientific tool	bismark	—	2025-08-12	None	True	True
+Scientific tool	blast	v2.13.0	2025-08-12	True	True	True
+Scientific tool	blat	v36	2025-08-12	True	True	True
+Scientific tool	bowtie2	v2.4.4	2025-08-12	True	True	True
+Scientific tool	braker2	v2.1.6	2025-08-12	True	True	True
+Utility	browsh	—	2025-08-12	None	True	True
+Scientific tool	bsmap	—	2025-08-12	None	True	True
+Utility	btop	—	2025-08-12	None	True	True
+Scientific tool	busco	v5.2.2	2025-08-12	True	True	True
+Scientific tool	bwa	v0.7.17a	2025-08-12	True	True	True
+Scientific tool	checkm	v1.1.3	2025-08-12	True	True	True
+Utility	circos	v0.69-9	2025-08-12	True	True	True
+Scientific tool	cutadapt	—	2025-08-12	None	True	True
 Utility	cwltool	v3.1.20211020155521	2025-08-11	True	True	True
-Utility	dua	v2.28.0	2025-08-06	True	True	True
-Utility	dust	v0.8.4	2024-10-24	True	True	True
-Scientific tool	fastani	v1.3.3	2025-08-11	True	True	True
-Scientific tool	fastq-tools	v0.8	2025-08-11	True	True	True
-Scientific tool	fastqc	v0.12.1	2025-08-11	True	True	True
-Scientific tool	fasttree	v2.1.11	2025-08-11	True	True	True
-Utility	fdupes	v2.4.0	2025-07-09	True	True	True
-Utility	ffmpeg	v7.1.1	2024-02-08	True	True	True
-Scientific tool	filtlong	v0.2.1	2025-08-11	True	True	True
-Utility	flac	—	2025-08-11	None	False	True
-Scientific tool	flash	—	2025-08-11	None	True	True
-Scientific tool	funannotate	—	2025-08-11	None	False	True
-Scientific tool	gatk	v4.2.0.0	2025-08-11	True	True	True
-Scientific tool	genemark-es	—	2025-08-11	None	False	True
-Scientific tool	gent	v1.0.0	2025-08-11	True	True	True
+Utility	dua	v2.28.0	2025-08-12	True	True	True
+Utility	dust	v0.8.4	2025-08-12	True	True	True
+Scientific tool	fastani	v1.3.3	2025-08-12	True	True	True
+Scientific tool	fastq-tools	v0.8	2025-08-12	True	True	True
+Scientific tool	fastqc	v0.12.1	2025-08-12	True	True	True
+Scientific tool	fasttree	v2.1.11	2025-08-12	True	True	True
+Utility	fdupes	v2.4.0	2025-08-12	True	True	True
+Utility	ffmpeg	v7.1.1	2024-02-08	True	True	False
+Scientific tool	filtlong	v0.2.1	2025-08-12	True	True	True
+Utility	flac	—	2025-08-12	None	False	True
+Scientific tool	flash	—	2025-08-12	None	True	True
+Scientific tool	funannotate	—	2025-08-12	None	False	True
+Scientific tool	gatk	v4.2.0.0	2025-08-12	True	True	True
+Scientific tool	genemark-es	—	2025-08-12	None	False	True
+Scientific tool	gent	v1.0.0	2025-08-12	True	True	True
 Remote Desktop Application	gimp	v3.0.4	2025-08-09	True	True	True
-Utility	glances	v3.3.1	2025-08-11	True	True	True
-Utility	gnuplot	v6.0	2025-08-06	True	True	True
-Utility	graphviz	v2.44.0	2025-07-23	True	True	True
-Scientific tool	guppy	—	2025-01-04	None	True	True
-Scientific tool	guppy-gpu	—	2025-08-11	None	True	True
-Utility	hashdeep	v4.4	2025-08-11	True	False	True
-Scientific tool	hisat2	v2.2.1	2025-08-11	True	True	True
-Scientific tool	hmmer	v3.3.1	2025-08-11	True	True	True
-Scientific tool	htslib	v1.13	2025-08-11	True	True	True
-Utility	hyperfine	v1.17.0	2025-08-11	True	False	True
-Utility	imagemagick	v7.1.1-39	2025-08-06	True	True	True
+Utility	glances	v3.3.1	2025-08-12	True	True	True
+Utility	gnuplot	v6.0	2025-08-12	True	True	True
+Utility	graphviz	v2.44.0	2025-08-12	True	False	True
+Scientific tool	guppy	—	2025-08-12	None	True	True
+Scientific tool	guppy-gpu	—	2025-08-12	None	True	True
+Utility	hashdeep	v4.4	2025-08-12	True	False	True
+Scientific tool	hisat2	v2.2.1	2025-08-12	True	True	True
+Scientific tool	hmmer	v3.3.1	2025-08-12	True	True	True
+Scientific tool	htslib	v1.13	2025-08-12	True	True	True
+Utility	hyperfine	v1.17.0	2025-08-12	True	False	True
+Utility	imagemagick	v7.1.1-39	2025-08-12	True	True	True
 Remote Desktop Application	inkscape	v1.2.2	2025-08-10	True	True	True
 Utility	jp	v0.2.1	2025-08-11	True	True	True
 Utility	jq	v1.7.1-r0	2025-08-11	True	False	True
