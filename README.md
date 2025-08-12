@@ -34,7 +34,7 @@ This repository lists the Singularity definition files and other files needed to
 | Utility | [dua](https://github.com/pscedu/singularity-dua) | v2.28.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [dust](https://github.com/pscedu/singularity-dust) | v0.8.4 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [fastani](https://github.com/pscedu/singularity-fastani) | v1.3.3 | 2025-08-12 | ✅ | ✅ | ✅ |
-| Scientific tool | [fastq-tools](https://github.com/pscedu/singularity-fastq-tools) | v0.8 | 2025-08-12 | None | ✅ | ✅ |
+| Scientific tool | [fastq-tools](https://github.com/pscedu/singularity-fastq-tools) | v0.8 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [fastqc](https://github.com/pscedu/singularity-fastqc) | v0.12.1 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [fasttree](https://github.com/pscedu/singularity-fasttree) | v2.1.11 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [fdupes](https://github.com/pscedu/singularity-fdupes) | v2.4.0 | 2025-08-12 | ✅ | ✅ | ✅ |
@@ -44,6 +44,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [flash](https://github.com/pscedu/singularity-flash) | — | 2025-08-12 | None | ✅ | ✅ |
 | Scientific tool | [funannotate](https://github.com/pscedu/singularity-funannotate) | — | 2025-08-12 | None | ❌ | ✅ |
 | Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | 2025-08-12 | ✅ | ✅ | ✅ |
+| Utility | [gcalcli](https://github.com/pscedu/singularity-gcalcli) | v4.5.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [genemark-es](https://github.com/pscedu/singularity-genemark-es) | — | 2025-08-12 | None | ❌ | ✅ |
 | Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Remote Desktop Application | [gimp](https://github.com/pscedu/singularity-gimp) | v3.0.4 | 2025-08-09 | ✅ | ✅ | ✅ |
@@ -73,13 +74,13 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [ncview](https://github.com/pscedu/singularity-ncview) | v2.1.8 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [octave](https://github.com/pscedu/singularity-octave) | v7.3.0 | 2025-08-12 | ✅ | ❌ | ✅ |
 | Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2025-08-12 | ✅ | ❌ | ✅ |
-| Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2025-08-12 | None | ✅ | ✅ |
+| Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | 2025-08-12 | ❌ | ✅ | ✅ |
-| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2025-08-12 | None | ✅ | ✅ |
+| Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2025-08-12 | ❌ | ✅ | ✅ |
 | Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | 2025-08-12 | ✅ | ❌ | ✅ |
 | Scientific tool | [prodigal](https://github.com/pscedu/singularity-prodigal) | v2.6.3 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [raw2ometiff](https://github.com/pscedu/singularity-raw2ometiff) | v3.0.0 | 2025-08-12 | ✅ | ❌ | ✅ |
-| Scientific tool | [raxml](https://github.com/pscedu/singularity-raxml) | v8.2.9 | 2025-08-12 | None | ✅ | ✅ |
+| Scientific tool | [raxml](https://github.com/pscedu/singularity-raxml) | v8.2.9 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [rclone](https://github.com/pscedu/singularity-rclone) | v1.70.3 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [rich-cli](https://github.com/pscedu/singularity-rich-cli) | v1.8.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [rnaview](https://github.com/pscedu/singularity-rnaview) | v2.0.0 | 2025-08-12 | ✅ | ✅ | ✅ |

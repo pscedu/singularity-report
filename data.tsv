@@ -29,7 +29,7 @@ Utility	cwltool	v3.1.20211020155521	2025-08-11	True	True	True
 Utility	dua	v2.28.0	2025-08-12	True	True	True
 Utility	dust	v0.8.4	2025-08-12	True	True	True
 Scientific tool	fastani	v1.3.3	2025-08-12	True	True	True
-Scientific tool	fastq-tools	v0.8	2025-08-12	None	True	True
+Scientific tool	fastq-tools	v0.8	2025-08-12	True	True	True
 Scientific tool	fastqc	v0.12.1	2025-08-12	True	True	True
 Scientific tool	fasttree	v2.1.11	2025-08-12	True	True	True
 Utility	fdupes	v2.4.0	2025-08-12	True	True	True
@@ -39,6 +39,7 @@ Utility	flac	—	2025-08-12	None	False	True
 Scientific tool	flash	—	2025-08-12	None	True	True
 Scientific tool	funannotate	—	2025-08-12	None	False	True
 Scientific tool	gatk	v4.2.0.0	2025-08-12	True	True	True
+Utility	gcalcli	v4.5.0	2025-08-12	True	True	True
 Scientific tool	genemark-es	—	2025-08-12	None	False	True
 Scientific tool	gent	v1.0.0	2025-08-12	True	True	True
 Remote Desktop Application	gimp	v3.0.4	2025-08-09	True	True	True
@@ -68,13 +69,13 @@ Utility	ncdu	v2.8	2025-08-12	True	True	True
 Scientific tool	ncview	v2.1.8	2025-08-12	True	True	True
 Scientific tool	octave	v7.3.0	2025-08-12	True	False	True
 Utility	pandiff	v0.6.0	2025-08-12	True	False	True
-Utility	pandoc	v2.18	2025-08-12	None	True	True
+Utility	pandoc	v2.18	2025-08-12	True	True	True
 Scientific tool	phylip-suite	v3.697	2025-08-12	False	True	True
-Scientific tool	picard	v2.23.2	2025-08-12	None	True	True
+Scientific tool	picard	v2.23.2	2025-08-12	False	True	True
 Scientific tool	porechop	v0.2.4	2025-08-12	True	False	True
 Scientific tool	prodigal	v2.6.3	2025-08-12	True	True	True
 Scientific tool	raw2ometiff	v3.0.0	2025-08-12	True	False	True
-Scientific tool	raxml	v8.2.9	2025-08-12	None	True	True
+Scientific tool	raxml	v8.2.9	2025-08-12	True	True	True
 Utility	rclone	v1.70.3	2025-08-12	True	True	True
 Utility	rich-cli	v1.8.0	2025-08-12	True	True	True
 Scientific tool	rnaview	v2.0.0	2025-08-12	True	True	True
