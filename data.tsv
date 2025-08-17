@@ -41,7 +41,7 @@ Scientific tool	funannotate	—	2025-08-13	None	False	True
 Scientific tool	gatk	v4.2.0.0	2025-08-13	True	True	True
 Utility	gcalcli	v4.5.0	2025-08-12	True	True	True
 Scientific tool	genemark-es	—	2025-08-13	None	False	True
-Scientific tool	gent	v1.0.0	2025-08-13	True	True	True
+Scientific tool	gent	v1.0.0	—	True	True	True
 Remote Desktop Application	gimp	v3.0.4	2025-08-09	True	True	True
 Utility	glances	v3.3.1	2025-08-13	True	True	True
 Utility	gnuplot	v6.0	2025-08-13	True	True	True
