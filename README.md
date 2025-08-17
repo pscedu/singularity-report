@@ -46,7 +46,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [gatk](https://github.com/pscedu/singularity-gatk) | v4.2.0.0 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Utility | [gcalcli](https://github.com/pscedu/singularity-gcalcli) | v4.5.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [genemark-es](https://github.com/pscedu/singularity-genemark-es) | — | 2025-08-13 | None | ❌ | ✅ |
-| Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | — | ✅ | ✅ | ✅ |
+| Scientific tool | [gent](https://github.com/pscedu/singularity-gent) | v1.0.0 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Remote Desktop Application | [gimp](https://github.com/pscedu/singularity-gimp) | v3.0.4 | 2025-08-09 | ✅ | ✅ | ✅ |
 | Utility | [glances](https://github.com/pscedu/singularity-glances) | v3.3.1 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Utility | [gnuplot](https://github.com/pscedu/singularity-gnuplot) | v6.0 | 2025-08-13 | ✅ | ✅ | ✅ |
