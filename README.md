@@ -5,7 +5,7 @@ This repository lists the Singularity definition files and other files needed to
 | Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |
 | --- | --- | --- | --- | --- | --- | --- |
 | Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2025-08-12 | ✅ | ✅ | ✅ |
-| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | v8 | 2025-08-12 | ❌ | ❌ | ✅ |
+| Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | v8 | 2025-08-19 | ❌ | ❌ | ✅ |
 | Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2025-08-12 | ✅ | ✅ | ✅ |
@@ -24,7 +24,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [braker2](https://github.com/pscedu/singularity-braker2) | v2.1.6 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Utility | [browsh](https://github.com/pscedu/singularity-browsh) | — | 2025-08-13 | None | ✅ | ✅ |
 | Scientific tool | [bsmap](https://github.com/pscedu/singularity-bsmap) | — | 2025-08-13 | None | ✅ | ✅ |
-| Utility | [btop](https://github.com/pscedu/singularity-btop) | — | 2025-08-13 | None | ✅ | ✅ |
+| Utility | [btop](https://github.com/pscedu/singularity-btop) | v1.0.20 | 2025-08-19 | ✅ | ✅ | ✅ |
 | Scientific tool | [busco](https://github.com/pscedu/singularity-busco) | v5.2.2 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [bwa](https://github.com/pscedu/singularity-bwa) | v0.7.17a | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [checkm](https://github.com/pscedu/singularity-checkm) | v1.1.3 | 2025-08-13 | ✅ | ✅ | ✅ |
@@ -57,7 +57,7 @@ This repository lists the Singularity definition files and other files needed to
 | Scientific tool | [hisat2](https://github.com/pscedu/singularity-hisat2) | v2.2.1 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [hmmer](https://github.com/pscedu/singularity-hmmer) | v3.3.1 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [htslib](https://github.com/pscedu/singularity-htslib) | v1.13 | 2025-08-13 | ✅ | ✅ | ✅ |
-| Utility | [hyperfine](https://github.com/pscedu/singularity-hyperfine) | v1.17.0 | 2025-08-13 | ✅ | ❌ | ✅ |
+| Utility | [hyperfine](https://github.com/pscedu/singularity-hyperfine) | v1.17.0 | 2025-08-19 | ✅ | ✅ | ✅ |
 | Utility | [imagemagick](https://github.com/pscedu/singularity-imagemagick) | v7.1.1-39 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Remote Desktop Application | [inkscape](https://github.com/pscedu/singularity-inkscape) | v1.2.2 | 2025-08-10 | ✅ | ✅ | ✅ |
 | Utility | [jp](https://github.com/pscedu/singularity-jp) | v0.2.1 | 2025-08-13 | ✅ | ✅ | ✅ |
@@ -69,13 +69,13 @@ This repository lists the Singularity definition files and other files needed to
 | Utility | [mc](https://github.com/pscedu/singularity-mc) | v4.8.32 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [meme-suite](https://github.com/pscedu/singularity-meme-suite) | v5.4.0 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [methylpy](https://github.com/pscedu/singularity-methylpy) | v1.4.3 | 2025-08-13 | ❌ | ✅ | ✅ |
-| Scientific tool | [nanoplot](https://github.com/pscedu/singularity-nanoplot) | v1.42.0 | 2025-08-13 | ✅ | ❌ | ✅ |
+| Scientific tool | [nanoplot](https://github.com/pscedu/singularity-nanoplot) | v1.42.0 | 2025-08-19 | ✅ | ✅ | ✅ |
 | Utility | [ncdu](https://github.com/pscedu/singularity-ncdu) | v2.8 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [ncview](https://github.com/pscedu/singularity-ncview) | v2.1.8 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Scientific tool | [octave](https://github.com/pscedu/singularity-octave) | v7.3.0 | 2025-08-13 | ✅ | ❌ | ✅ |
-| Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2025-08-13 | ✅ | ❌ | ✅ |
+| Utility | [pandiff](https://github.com/pscedu/singularity-pandiff) | v0.6.0 | 2025-08-19 | ✅ | ✅ | ✅ |
 | Utility | [pandoc](https://github.com/pscedu/singularity-pandoc) | v2.18 | 2025-08-13 | ✅ | ✅ | ✅ |
-| Utility | [papis](https://github.com/pscedu/singularity-papis) | — | 2025-08-12 | None | ❌ | ❌ |
+| Utility | [papis](https://github.com/pscedu/singularity-papis) | — | 2025-08-19 | None | ❌ | ❌ |
 | Scientific tool | [phylip-suite](https://github.com/pscedu/singularity-phylip-suite) | v3.697 | 2025-08-12 | ❌ | ✅ | ✅ |
 | Scientific tool | [picard](https://github.com/pscedu/singularity-picard) | v2.23.2 | 2025-08-13 | ❌ | ✅ | ✅ |
 | Scientific tool | [porechop](https://github.com/pscedu/singularity-porechop) | v0.2.4 | 2025-08-13 | ✅ | ❌ | ✅ |
