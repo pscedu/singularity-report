@@ -8,6 +8,9 @@ Description:
 
     README.md and data.tsv with columns:
         Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready
+
+    Additionally, writes a coverage banner at the top of README.md showing the
+    percentage of repos where Container, Build ready, and Publishing ready are all True.
 ===============================================================================
 """
 
@@ -27,24 +30,105 @@ CURRENT_YEAR = date.today().year
 API_BASE = "https://api.github.com"
 
 STEM_REPOS = [
-    "stride", "nanoplot", "star-fusion", "filtlong", "porechop", "anvio",
-    "funannotate", "fastq-tools", "meme-suite", "braker2", "rust", "guppy",
-    "guppy-gpu", "bsmap", "salmon", "rnaview", "bioformats2raw", "raw2ometiff",
-    "flash", "blat", "bedops", "genemark-es", "augustus", "checkm", "ncview",
-    "bowtie2", "asciigenome", "fastqc", "sra-toolkit", "gatk", "hmmer",
-    "bcftools", "raxml", "spades", "busco", "samtools", "bedtools", "bamtools",
-    "fastani", "phylip-suite", "blast", "viennarna", "cutadapt", "bismark",
-    "star", "prodigal", "bwa", "picard", "hisat2", "abyss", "octave", "tiger",
-    "gent", "methylpy", "fasttree", "vcf2maf", "htslib", "kraken2",
-    "aspera-connect", "trimmomatic",
+    "stride",
+    "nanoplot",
+    "star-fusion",
+    "filtlong",
+    "porechop",
+    "anvio",
+    "funannotate",
+    "fastq-tools",
+    "meme-suite",
+    "braker2",
+    "rust",
+    "guppy",
+    "guppy-gpu",
+    "bsmap",
+    "salmon",
+    "rnaview",
+    "bioformats2raw",
+    "raw2ometiff",
+    "flash",
+    "blat",
+    "bedops",
+    "genemark-es",
+    "augustus",
+    "checkm",
+    "ncview",
+    "bowtie2",
+    "asciigenome",
+    "fastqc",
+    "sra-toolkit",
+    "gatk",
+    "hmmer",
+    "bcftools",
+    "raxml",
+    "spades",
+    "busco",
+    "samtools",
+    "bedtools",
+    "bamtools",
+    "fastani",
+    "phylip-suite",
+    "blast",
+    "viennarna",
+    "cutadapt",
+    "bismark",
+    "star",
+    "prodigal",
+    "bwa",
+    "picard",
+    "hisat2",
+    "abyss",
+    "octave",
+    "tiger",
+    "gent",
+    "methylpy",
+    "fasttree",
+    "vcf2maf",
+    "htslib",
+    "kraken2",
+    "aspera-connect",
+    "trimmomatic",
 ]
 
 UTIL_REPOS = [
-    "papis", "hashdeep", "gcalcli", "dua", "vim", "libtiff-tools", "wordgrinder",
-    "shellcheck", "pandiff", "rich-cli", "jq", "jp", "lowcharts", "btop",
-    "aws-cli", "cwltool", "circos", "glances", "fdupes", "graphviz", "browsh",
-    "hyperfine", "dust", "gnuplot", "pandoc", "mc", "bat", "flac", "visidata",
-    "octave", "ncdu", "lazygit", "asciinema", "ffmpeg", "imagemagick", "rclone",
+    "papis",
+    "hashdeep",
+    "gcalcli",
+    "dua",
+    "vim",
+    "libtiff-tools",
+    "wordgrinder",
+    "shellcheck",
+    "pandiff",
+    "rich-cli",
+    "jq",
+    "jp",
+    "lowcharts",
+    "btop",
+    "aws-cli",
+    "cwltool",
+    "circos",
+    "glances",
+    "fdupes",
+    "graphviz",
+    "browsh",
+    "hyperfine",
+    "dust",
+    "gnuplot",
+    "pandoc",
+    "mc",
+    "bat",
+    "flac",
+    "visidata",
+    "octave",
+    "ncdu",
+    "lazygit",
+    "asciinema",
+    "ffmpeg",
+    "imagemagick",
+    "rclone",
 ]
 
 VIZ_REPOS = ["gimp", "inkscape"]
@@ -145,6 +229,7 @@ def format_status(value: Optional[str]) -> str:
         return "None"
     return value
 
+
 def build_row(
     category_label: str,
     repo: str,
@@ -171,6 +256,46 @@ def unified_catalog() -> List[Tuple[str, str]]:
     for r in VIZ_REPOS:
         m.setdefault(r, "Remote Desktop Application")
     return sorted(((cat, r) for r, cat in m.items()), key=lambda x: x[1].lower())
+
+
+# ── Coverage helpers ───────────────────────────────────────────────────────────
+def coverage_percentage(
+    items: List[Tuple[str, str]],
+    container_map: Dict[str, Optional[str]],
+    build_map: Dict[str, str],
+    publish_map: Dict[str, str],
+) -> int:
+    """Return integer percentage of repos where all three statuses are True."""
+    total = len(items)
+    if total == 0:
+        return 0
+    good = sum(
+        1
+        for _, repo in items
+        if container_map.get(repo) == "True"
+        and build_map.get(repo) == "True"
+        and publish_map.get(repo) == "True"
+    )
+    return round(100 * good / total)
+
+
+def coverage_badge(pct: int) -> str:
+    """Return a shields.io badge markdown string for the given percentage."""
+    # Simple color scale
+    if pct >= 90:
+        color = "brightgreen"
+    elif pct >= 75:
+        color = "green"
+    elif pct >= 60:
+        color = "yellowgreen"
+    elif pct >= 40:
+        color = "yellow"
+    elif pct >= 25:
+        color = "orange"
+    else:
+        color = "red"
+    # Alt text uses the exact wording the user requested (coverage:<percentage>:)
+    return f"![coverage:{pct}%](https://img.shields.io/badge/coverage-{pct}%25-{color})\n\n"
 
 
 # ── Main logic ─────────────────────────────────────────────────────────────────
@@ -211,8 +336,14 @@ def write_tables() -> None:
                 build_map[repo] = "False"
                 publish_map[repo] = "False"
 
+    # Compute coverage and banner
+    pct = coverage_percentage(items, container_map, build_map, publish_map)
+    banner = coverage_badge(pct)
+
     # README.md
     with open(OUTPUT, "w", encoding="utf-8") as md:
+        # Coverage banner goes at the very top
+        md.write(banner)
         md.write(HEADER)
         md.write(
             "| Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |\n"
