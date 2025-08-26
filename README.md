@@ -1,3 +1,5 @@
+![coverage:75%](https://img.shields.io/badge/coverage-75%25-green)
+
 # List of Singularity definition files, modulefiles and more
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
 
