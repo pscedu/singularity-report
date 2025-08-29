@@ -1,4 +1,4 @@
-![coverage:73%](https://img.shields.io/badge/coverage-73%25-yellowgreen)
+![coverage:75%](https://img.shields.io/badge/coverage-75%25-green)
 
 # List of Singularity definition files, modulefiles and more
 [![Build it!](https://github.com/pscedu/singularity/actions/workflows/build.yml/badge.svg)](https://github.com/pscedu/singularity/actions/workflows/build.yml)
@@ -6,11 +6,11 @@
 This repository lists the Singularity definition files and other files needed to deploy software on Bridges2 and similar systems maintained by the Pittsburgh Supercomputing Center.
 | Category | Name | Latest | Last Commit | Container | Build ready | Publishing ready |
 | --- | --- | --- | --- | --- | --- | --- |
-| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2025-08-12 | ✅ | ❌ | ✅ |
+| Scientific tool | [abyss](https://github.com/pscedu/singularity-abyss) | v2.1.5 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [anvio](https://github.com/pscedu/singularity-anvio) | v8 | 2025-08-19 | ❌ | ❌ | ✅ |
 | Scientific tool | [asciigenome](https://github.com/pscedu/singularity-asciigenome) | v1.17.0 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Utility | [asciinema](https://github.com/pscedu/singularity-asciinema) | v2.3.0 | 2025-08-12 | ✅ | ✅ | ✅ |
-| Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2025-08-12 | ✅ | ❌ | ✅ |
+| Scientific tool | [aspera-connect](https://github.com/pscedu/singularity-aspera-connect) | v4.1.12 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [augustus](https://github.com/pscedu/singularity-augustus) | v3.5 | 2025-08-13 | ✅ | ✅ | ✅ |
 | Utility | [aws-cli](https://github.com/pscedu/singularity-aws-cli) | v2.22.28 | 2025-08-12 | ✅ | ✅ | ✅ |
 | Scientific tool | [bamtools](https://github.com/pscedu/singularity-bamtools) | v2.5.2 | 2025-08-13 | ✅ | ✅ | ✅ |
